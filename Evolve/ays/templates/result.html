@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@ your service</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style/upstyle.css' %}">
+</head>
+<body id="body">
+<div>
+<div id="titleb">
+	<div>
+
+		<form id="log_in_b" method="get" action="/login/">
+			<button class="button" type="submit">Log In</button>
+		</form>
+		<br>
+
+		<form id="sign_up_b" method="get" action="/signup/">
+			<h4 id="new">New User?</h4><button class="button" type="submit">Sign Up</button>
+		</form>
+	</div>
+	<div id="title">
+		<h1 id="name" >at <br>your <br>service</h1>
+		<h3 id="caption"> Services, as you like it.</h3>
+	</div>	
+</div>
+
+{% for p in people %}
+		{% if post.district == p.district %}
+		{{p.city}}<br>
+		{{p.phone_no}}
+						
+		{% endif %}		
+{% endfor %}
+
+
+
+
+</body>
+</html>

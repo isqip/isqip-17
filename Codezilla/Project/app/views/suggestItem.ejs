@@ -1,0 +1,52 @@
+<% include header %>
+
+    <br>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">Please Go through the list of available Items Before Applying for a New One</div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Item ID
+                    </th>
+                    <th>
+                        Item Name
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            <% list.forEach(function(x){ %>
+                <tr>
+                    <td>
+                        <%- x._id %>
+                    </td>
+                    <td>
+                        <%- x.name %>
+                    </td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    </div>  
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            If you Still haven't found the item You are looking for, feel free to inform us by submitting the form below and we'll update it
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="row">
+        <form method="post" action="/student/add">
+            <div class="form-group">
+                <label for="class">Name</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <input type="submit" class="btn btn-default">
+        </form>
+    </div>
+
+<% include footer %>

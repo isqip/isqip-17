@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>at your service</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style/upstyle.css' %}">
+</head>
+<body id="body">
+<div >
+<div id="titleb">
+	<h1 id="name" >at your service</h1>
+	<h3 id="caption"> Like, capture and share the world's moments</h3>
+<table id="table">
+  	<tr >
+    	<td id="one"><a id="l1" href="">about</a></th>
+    	<td id="two"><a id="l2" href="">explore</a> </th> 
+    	<td id="thre"><a id="l3" href="">contact</th>
+  	</tr>
+ </table>
+	</div>
+
+	<div id="fblock">
+
+		<p>FEED</p>
+	</div>
+
+	{% for pic in pics %}
+		<img src="{{pic.photo.url }}">
+		<br>
+		{{pic.description}}
+		{{pic.id}}
+			{%endfor%}
+	<div id="sblock">
+		<p id="stext">Text2</p>
+	</div>
+	</div>
+
+</body>
+</html>

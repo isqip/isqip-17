@@ -1,0 +1,4309 @@
+[gd_scene load_steps=52 format=1]
+
+[ext_resource path="res://lvl1.gd" type="Script" id=1]
+[ext_resource path="res://presentation c2 5.png" type="Texture" id=2]
+[ext_resource path="res://HORRORTILES.tres" type="TileSet" id=3]
+[ext_resource path="res://graveyardtilesetnew/png/Objects/TombStone (1).png" type="Texture" id=4]
+[ext_resource path="res://graveyardtilesetnew/png/Objects/Tree.png" type="Texture" id=5]
+[ext_resource path="res://graveyardtilesetnew/png/Objects/DeadBush.png" type="Texture" id=6]
+[ext_resource path="res://graveyardtilesetnew/png/Objects/Skeleton.png" type="Texture" id=7]
+[ext_resource path="res://graveyardtilesetnew/png/Objects/Bush (2).png" type="Texture" id=8]
+[ext_resource path="res://graveyardtilesetnew/png/Objects/TombStone (2).png" type="Texture" id=9]
+[ext_resource path="res://graveyardtilesetnew/png/Tiles/Bone (3).png" type="Texture" id=10]
+[ext_resource path="res://graveyardtilesetnew/png/Objects/ArrowSign.png" type="Texture" id=11]
+[ext_resource path="res://graveyardtilesetnew/png/Tiles/Bone (4).png" type="Texture" id=12]
+[ext_resource path="res://graveyardtilesetnew/png/Objects/Sign.png" type="Texture" id=13]
+[ext_resource path="res://Acme-Regular.fnt" type="BitmapFont" id=14]
+[ext_resource path="res://graveyardtilesetnew/png/Objects/Stone.png" type="Texture" id=15]
+[ext_resource path="res://graveyardtilesetnew/png/Tiles/Bone (1).png" type="Texture" id=16]
+[ext_resource path="res://graveyardtilesetnew/png/Tiles/Bone (2).png" type="Texture" id=17]
+[ext_resource path="res://wintertileset/png/Object/IceBox.png" type="Texture" id=18]
+[ext_resource path="res://sound_coin.wav" type="Sample" id=19]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=20]
+[ext_resource path="res://player.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Swamp_Background_web.ogg" type="AudioStream" id=22]
+[ext_resource path="res://Idle__005.png" type="Texture" id=23]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12.7245, 6.34453 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.93262, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 253.164, 55.3792 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 177.268, 40.2 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 247.899, 59.174 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 118.876, 32.6105 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 126.465, 28.8157 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 134.055, 25.0209 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128.043, 40.614 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 812.187, 100.527 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 512.601, 145.843 )
+
+[sub_resource type="RectangleShape2D" id=13]
+
+custom_solver_bias = 0.0
+extents = Vector2( 917.481, 10 )
+
+[sub_resource type="RectangleShape2D" id=14]
+
+custom_solver_bias = 0.0
+extents = Vector2( 58.8604, 171.707 )
+
+[sub_resource type="SpriteFrames" id=15]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 185.177, 520.083, 115.517, 517.429, 127.459, 483.595, 154.659, 472.317, 167.264, 471.653, 177.879, 481.605, 184.513, 494.873, 188.494, 516.103 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 127.459, 483.595, 119.498, 469, 145.371, 457.058, 154.659, 472.317 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 154.659, 472.317, 169.738, 515.986, 115.517, 517.429, 127.459, 483.595, 145.371, 457.058 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 177.879, 481.605, 184.513, 494.873, 188.494, 516.103, 169.738, 515.986, 154.659, 472.317, 167.264, 471.653 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 127.459, 483.595, 119.498, 469, 145.371, 457.058 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 4919.82, 214.498, 4919.82, 220.528, 4873.09, 211.484, 4895.7, 172.293 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 4895.7, 172.293, 4936.4, 191.888, 4919.82, 214.498 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 4873.09, 211.484, 4895.7, 172.293, 4873.09, 211.484 )
+
+[sub_resource type="RectangleShape2D" id=24]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 18.7841 )
+
+[sub_resource type="SampleLibrary" id=25]
+
+samples/sound_coin = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 19 )
+}
+
+[sub_resource type="Animation" id=26]
+
+resource/name = "taken"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SamplePlayer:play/play")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 2,
+"values": [ "sound_coin" ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("SamplePlayer")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray(  ),
+"transitions": FloatArray(  ),
+"values": [  ]
+}
+
+[sub_resource type="RectangleShape2D" id=27]
+
+custom_solver_bias = 0.0
+extents = Vector2( 117.907, 10 )
+
+[sub_resource type="RectangleShape2D" id=28]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="lvl1" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="sc5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 6997.83, 169.098 )
+transform/scale = Vector2( 2.75246, 2.30811 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sc4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 9179.2, 169.098 )
+transform/scale = Vector2( 2.75246, 2.30811 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sc3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2611.61, 167.72 )
+transform/scale = Vector2( 2.75246, 2.30811 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sc2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 434.408, 159.098 )
+transform/scale = Vector2( 2.75246, 2.30811 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sc1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 4807.83, 169.098 )
+transform/scale = Vector2( 2.75246, 2.30811 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+
+editor/display_folded = true
+mode = 0
+tile_set = ExtResource( 3 )
+cell/size = Vector2( 128, 128 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -7, 8, -6, 8, -5, 8, -4, 8, -3, 8, -2, 8, -1, 9, 65529, 11, 65530, 11, 65531, 11, 65532, 11, 65533, 11, 65534, 11, 65535, 12, 131065, 11, 131066, 11, 131067, 11, 131068, 11, 131069, 11, 131070, 11, 131071, 12, 65554, 5, 65555, 7, 65587, 5, 65588, 6, 65589, 7, 196601, 11, 196602, 11, 196603, 11, 196604, 11, 196605, 11, 196606, 11, 196607, 12, 131079, 5, 131080, 7, 131087, 5, 131088, 7, 131093, 5, 131094, 7, 131108, 1, 131109, 8, 131110, 8, 131111, 8, 131112, 8, 131113, 8, 131114, 8, 131115, 9, 131119, 5, 131120, 6, 131121, 7, 131133, 1, 131134, 8, 131135, 8, 131136, 8, 131137, 8, 131138, 8, 131139, 8, 131140, 8, 131141, 8, 131142, 8, 131143, 8, 131144, 8, 131145, 8, 131146, 8, 131147, 8, 131148, 8, 131149, 8, 131150, 9, 262137, 11, 262138, 11, 262139, 11, 262140, 11, 262141, 11, 262142, 11, 262143, 12, 196613, 5, 196614, 7, 196618, 1, 196619, 8, 196620, 8, 196621, 9, 196632, 1, 196633, 8, 196634, 8, 196635, 8, 196636, 8, 196637, 8, 196638, 8, 196639, 8, 196640, 8, 196641, 8, 196642, 8, 196643, 8, 196644, 14, 196645, 11, 196646, 11, 196647, 11, 196648, 11, 196649, 11, 196650, 11, 196651, 0, 196652, 2, 196653, 9, 196663, 1, 196664, 8, 196665, 8, 196666, 8, 196667, 8, 196668, 8, 196669, 14, 196670, 11, 196671, 11, 196672, 11, 196673, 11, 196674, 11, 196675, 11, 196676, 11, 196677, 11, 196678, 11, 196679, 11, 196680, 11, 196681, 11, 196682, 11, 196683, 11, 196684, 11, 196685, 11, 196686, 12, 327673, 11, 327674, 11, 327675, 11, 327676, 11, 327677, 11, 327678, 11, 327679, 0, 262144, 2, 262145, 8, 262146, 8, 262147, 9, 262148, 16, 262149, 16, 262150, 16, 262151, 16, 262152, 16, 262153, 16, 262154, 10, 262155, 11, 262156, 11, 262157, 12, 262158, 16, 262159, 16, 262160, 16, 262161, 16, 262162, 16, 262163, 16, 262164, 16, 262165, 16, 262166, 16, 262168, 10, 262169, 11, 262170, 11, 262171, 11, 262172, 11, 262173, 11, 262174, 11, 262175, 11, 262176, 11, 262177, 11, 262178, 11, 262179, 11, 262180, 11, 262181, 11, 262182, 11, 262183, 11, 262184, 11, 262185, 11, 262186, 11, 262187, 11, 262188, 11, 262189, 0, 262190, 2, 262191, 8, 262192, 8, 262193, 8, 262194, 8, 262195, 8, 262196, 8, 262197, 8, 262198, 13, 262199, 14, 262200, 11, 262201, 11, 262202, 11, 262203, 11, 262204, 11, 262205, 11, 262206, 11, 262207, 11, 262208, 11, 262209, 11, 262210, 11, 262211, 11, 262212, 11, 262213, 11, 262214, 11, 262215, 11, 262216, 11, 262217, 11, 262218, 11, 262219, 11, 262220, 11, 262221, 11, 262222, 12, 393209, 11, 393210, 11, 393211, 11, 393212, 11, 393213, 11, 393214, 11, 393215, 11, 327680, 11, 327681, 11, 327682, 11, 327683, 11, 327684, 16, 327685, 16, 327686, 16, 327687, 16, 327688, 16, 327689, 16, 327690, 10, 327691, 11, 327692, 11, 327693, 12, 327694, 16, 327695, 16, 327696, 16, 327697, 16, 327698, 16, 327699, 16, 327700, 16, 327701, 16, 327702, 16, 327703, 16, 327704, 10, 327705, 11, 327706, 11, 327707, 11, 327708, 11, 327709, 11, 327710, 11, 327711, 11, 327712, 11, 327713, 11, 327714, 11, 327715, 11, 327716, 11, 327717, 11, 327718, 11, 327719, 11, 327720, 11, 327721, 11, 327722, 11, 327723, 11, 327724, 11, 327725, 11, 327726, 11, 327727, 11, 327728, 11, 327729, 11, 327730, 11, 327731, 11, 327732, 11, 327733, 11, 327734, 11, 327735, 11, 327736, 11, 327737, 11, 327738, 11, 327739, 11, 327740, 11, 327741, 11, 327742, 11, 327743, 11, 327744, 11, 327745, 11, 327746, 11, 327747, 11, 327748, 11, 327749, 11, 327750, 11, 327751, 11, 327752, 11, 327753, 11, 327754, 11, 327755, 11, 327756, 11, 327757, 11, 327758, 12, 458745, 11, 458746, 11, 458747, 11, 458748, 11, 458749, 11, 458750, 11, 458751, 11, 393216, 11, 393217, 11, 393218, 11, 393219, 11, 393220, 16, 393221, 16, 393222, 16, 393223, 16, 393224, 16, 393225, 16, 393226, 10, 393227, 11, 393228, 11, 393229, 12, 393240, 10, 393241, 11, 393242, 11, 393243, 11, 393244, 11, 393245, 11, 393246, 11, 393247, 11, 393248, 11, 393249, 11, 393250, 11, 393251, 11, 393252, 11, 393253, 11, 393254, 11, 393255, 11, 393256, 11, 393257, 11, 393258, 11, 393259, 11, 393260, 11, 393261, 11, 393262, 11, 393263, 11, 393264, 11, 393265, 11, 393266, 11, 393267, 11, 393268, 11, 393269, 11, 393270, 11, 393271, 11, 393272, 11, 393273, 11, 393274, 11, 393275, 11, 393276, 11, 393277, 11, 393278, 11, 393279, 11, 393280, 11, 393281, 11, 393282, 11, 393283, 11, 393284, 11, 393285, 11, 393286, 11, 393287, 11, 393288, 11, 393289, 11, 393290, 11, 393291, 11, 393292, 11, 393293, 11, 393294, 12, 458783, 11, 458784, 11, 458785, 11, 458786, 11, 458787, 11, 458788, 11, 458794, 11, 458795, 11, 458796, 11, 458797, 11, 458798, 11, 458799, 11, 458800, 11, 458801, 11, 458804, 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TombStone (1)" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 838.599, 342.789 )
+transform/scale = Vector2( 1.55679, 1.65242 )
+texture = ExtResource( 4 )
+
+[node name="Tree" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 83.2632, 393.012 )
+texture = ExtResource( 5 )
+
+[node name="DeadBush" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 1469.14, 355.051 )
+texture = ExtResource( 6 )
+
+[node name="Skeleton" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 569.359, 573.095 )
+texture = ExtResource( 7 )
+
+[node name="Bush (2)" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 230.786, 484.484 )
+texture = ExtResource( 8 )
+
+[node name="TombStone (2)" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 2507.56, 81.5037 )
+transform/scale = Vector2( 1.77665, 1.39687 )
+texture = ExtResource( 9 )
+
+[node name="Bush (2) 2" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 2882.71, 228.284 )
+texture = ExtResource( 8 )
+
+[node name="Tree 2" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 3161.25, 275.453 )
+texture = ExtResource( 5 )
+
+[node name="Tree 3" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 3231.68, 279.997 )
+texture = ExtResource( 5 )
+
+[node name="Tree 4" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 3308.93, 275.453 )
+texture = ExtResource( 5 )
+
+[node name="DeadBush 2" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 3835.61, 341.667 )
+transform/scale = Vector2( 1.42948, 1.48252 )
+texture = ExtResource( 6 )
+
+[node name="Tree 5" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 4298.1, 227.968 )
+transform/scale = Vector2( 1.28649, 1.39571 )
+texture = ExtResource( 5 )
+
+[node name="DeadBush 3" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 4801.93, 201.934 )
+transform/scale = Vector2( 1.30899, 1.69744 )
+texture = ExtResource( 6 )
+
+[node name="DeadBush4" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 4881.93, 201.934 )
+transform/scale = Vector2( 1.30899, 1.69744 )
+texture = ExtResource( 6 )
+
+[node name="Bone (3)" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 168.525, 560.13 )
+texture = ExtResource( 10 )
+
+[node name="Bone (3)1" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 1361.36, 444.254 )
+texture = ExtResource( 10 )
+
+[node name="Bone (3)2" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 1361.36, 444.254 )
+texture = ExtResource( 10 )
+
+[node name="Bone (3)3" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 1659, 444.254 )
+texture = ExtResource( 10 )
+
+[node name="Bone (3)4" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 3147.21, 455.615 )
+texture = ExtResource( 10 )
+
+[node name="ArrowSign" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 1030.67, 223.074 )
+transform/scale = Vector2( 1.21333, 1.14715 )
+texture = ExtResource( 11 )
+
+[node name="Bone (4)" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 452.534, 576.035 )
+texture = ExtResource( 12 )
+
+[node name="Bone (4) 2" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 2046.48, 314.386 )
+texture = ExtResource( 12 )
+
+[node name="Bone (3) 2" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 4925.89, 463.298 )
+transform/scale = Vector2( 1.45783, 1.31129 )
+texture = ExtResource( 10 )
+
+[node name="Bone (3) 3" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 7358.6, 430.779 )
+texture = ExtResource( 10 )
+
+[node name="Bone (3) 4" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 8004.32, 473.121 )
+texture = ExtResource( 10 )
+
+[node name="Bone (4) 3" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 8575.94, 420.193 )
+texture = ExtResource( 12 )
+
+[node name="TombStone (1) 2" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 6700.03, 465.334 )
+transform/scale = Vector2( 2.02957, 2.19858 )
+texture = ExtResource( 4 )
+
+[node name="Sign" type="Sprite" parent="TileMap"]
+
+transform/pos = Vector2( 8991.66, 165.165 )
+transform/scale = Vector2( 2.54773, 2.05962 )
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="TileMap/Sign"]
+
+anchor/left = 3
+anchor/top = 3
+rect/rotation = 8.24054
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 81.5
+margin/top = 57.5
+margin/right = 30.0
+margin/bottom = 24.0
+custom_fonts/font = ExtResource( 14 )
+custom_colors/font_color = Color( 0.332031, 0.020752, 0.020752, 1 )
+text = "YOU WON
+"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="death" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1796.99, 640.139 )
+transform/scale = Vector2( 40.8539, 1.27739 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.42385, 0, 0, 6.04984, -0.248962, -6.29648 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death"]
+
+transform/pos = Vector2( -0.248962, -6.29648 )
+transform/scale = Vector2( 2.42385, 6.04984 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="left wall" type="StaticBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 0.899252, 0, 0, 33.0339, -4.11941, 319.579 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left wall"]
+
+transform/pos = Vector2( -4.11941, 319.579 )
+transform/scale = Vector2( 0.899252, 33.0339 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="right wall" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 9109.66, 38.4016 )
+transform/scale = Vector2( 0.962098, 1.53772 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 2.50641, 0, 0, 19.1888, 31.249, 163.673 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right wall"]
+
+transform/pos = Vector2( 31.249, 163.673 )
+transform/scale = Vector2( 2.50641, 19.1888 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 83.4852, 318.762 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 0.235813, 152.915, 215.457 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+
+transform/pos = Vector2( 152.915, 215.457 )
+transform/scale = Vector2( 1, 0.235813 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 2" type="StaticBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 0.659148, 0, 0, 0.157442, 768.592, 393.499 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 2"]
+
+transform/pos = Vector2( 768.592, 393.499 )
+transform/scale = Vector2( 0.659148, 0.157442 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 3" type="StaticBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 1529.3, 461.024 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 3"]
+
+transform/pos = Vector2( 1529.3, 461.024 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 4" type="StaticBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 1, 0, 0, 0.276881, 1024.59, 277.832 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 4"]
+
+transform/pos = Vector2( 1024.59, 277.832 )
+transform/scale = Vector2( 1, 0.276881 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 5" type="StaticBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 8 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 2045.39, 288.404 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 5"]
+
+transform/pos = Vector2( 2045.39, 288.404 )
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 6" type="StaticBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 9 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 2424.87, 159.381 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 6"]
+
+transform/pos = Vector2( 2424.87, 159.381 )
+shape = SubResource( 9 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 7" type="StaticBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Matrix32( 1, 0, 0, 0.245708, 2817.83, 273.139 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 7"]
+
+transform/pos = Vector2( 2817.83, 273.139 )
+transform/scale = Vector2( 1, 0.245708 )
+shape = SubResource( 10 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 8" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 11 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 3884.56, 500.99 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 8"]
+
+transform/pos = Vector2( 3884.56, 500.99 )
+shape = SubResource( 11 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 9" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 12 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 5118.15, 412.876 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 9"]
+
+transform/pos = Vector2( 5118.15, 412.876 )
+shape = SubResource( 12 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 10" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 13 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 6460, 528.683 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 10"]
+
+transform/pos = Vector2( 6460, 528.683 )
+shape = SubResource( 13 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D 11" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( -3.04792, 0, 0, 0.14089, 6207.27, 286.032 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 11"]
+
+transform/pos = Vector2( 6207.27, 286.032 )
+transform/scale = Vector2( -3.04792, 0.14089 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( -3.04792, 0, 0, 0.14089, 6720.99, 145.615 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12"]
+
+transform/pos = Vector2( 6720.99, 145.615 )
+transform/scale = Vector2( -3.04792, 0.14089 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( -6.37661, 0, 0, 0.385928, 7426.92, 455.559 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13"]
+
+transform/pos = Vector2( 7426.92, 455.559 )
+transform/scale = Vector2( -6.37661, 0.385928 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( -11.1446, 0, 0, 0.748585, 8468.48, 395.625 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14"]
+
+transform/pos = Vector2( 8468.48, 395.625 )
+transform/scale = Vector2( -11.1446, 0.748585 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+editor/display_folded = true
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="RigidBody2D"]
+
+frames = SubResource( 15 )
+animation = "default"
+
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D/AnimatedSprite"]
+
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="StaticBody2D 12" type="StaticBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 17 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D 12"]
+
+build_mode = 0
+polygon = Vector2Array( 115.517, 517.429, 127.459, 483.595, 119.498, 469, 145.371, 457.058, 154.659, 472.317, 167.264, 471.653, 177.879, 481.605, 184.513, 494.873, 188.494, 516.103, 185.177, 520.083 )
+shape_range = Vector2( 0, 1 )
+trigger = false
+
+[node name="Stone" type="Sprite" parent="StaticBody2D 12/CollisionPolygon2D"]
+
+transform/pos = Vector2( 152.153, 490.706 )
+transform/scale = Vector2( 0.807582, 1.03888 )
+texture = ExtResource( 15 )
+modulate = Color( 0.183594, 0.174271, 0.174271, 1 )
+
+[node name="Bone (1)" type="Sprite" parent="StaticBody2D 12/CollisionPolygon2D/Stone"]
+
+transform/pos = Vector2( -5.60974, -15.8018 )
+transform/scale = Vector2( 0.743647, 0.593769 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 275.744, 14.3324 )
+input/pickable = false
+shapes/0/shape = SubResource( 18 )
+shapes/0/transform = Matrix32( 0.737677, 0, 0, 0.560596, 24.5597, 215.765 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 19 )
+shapes/1/transform = Matrix32( 0.737677, 0, 0, 0.560596, 24.5597, 215.765 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 20 )
+shapes/2/transform = Matrix32( 0.737677, 0, 0, 0.560596, 24.5597, 215.765 )
+shapes/2/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D15"]
+
+transform/pos = Vector2( 24.5597, 215.765 )
+transform/scale = Vector2( 0.737677, 0.560596 )
+build_mode = 0
+polygon = Vector2Array( 115.517, 517.429, 127.459, 483.595, 119.498, 469, 145.371, 457.058, 154.659, 472.317, 167.264, 471.653, 177.879, 481.605, 184.513, 494.873, 188.494, 516.103, 169.738, 515.986 )
+shape_range = Vector2( 0, 2 )
+trigger = false
+
+[node name="Stone" type="Sprite" parent="StaticBody2D15/CollisionPolygon2D"]
+
+transform/pos = Vector2( 152.153, 490.706 )
+transform/scale = Vector2( 0.807582, 1.03888 )
+texture = ExtResource( 15 )
+modulate = Color( 0.183594, 0.174271, 0.174271, 1 )
+
+[node name="Bone (1)" type="Sprite" parent="StaticBody2D15/CollisionPolygon2D/Stone"]
+
+transform/pos = Vector2( -6.43121, -15.8018 )
+transform/scale = Vector2( 0.743647, 0.593769 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 1532.26, -124.324 )
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 17 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D16"]
+
+build_mode = 0
+polygon = Vector2Array( 115.517, 517.429, 127.459, 483.595, 119.498, 469, 145.371, 457.058, 154.659, 472.317, 167.264, 471.653, 177.879, 481.605, 184.513, 494.873, 188.494, 516.103, 185.177, 520.083 )
+shape_range = Vector2( 0, 1 )
+trigger = false
+
+[node name="Stone" type="Sprite" parent="StaticBody2D16/CollisionPolygon2D"]
+
+transform/pos = Vector2( 152.153, 490.706 )
+transform/scale = Vector2( 0.807582, 1.03888 )
+texture = ExtResource( 15 )
+modulate = Color( 0.183594, 0.174271, 0.174271, 1 )
+
+[node name="Bone (1)" type="Sprite" parent="StaticBody2D16/CollisionPolygon2D/Stone"]
+
+transform/pos = Vector2( -6.43121, -15.8018 )
+transform/scale = Vector2( 0.743647, 0.593769 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D20" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 1532.26, -124.324 )
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 17 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D20"]
+
+build_mode = 0
+polygon = Vector2Array( 115.517, 517.429, 127.459, 483.595, 119.498, 469, 145.371, 457.058, 154.659, 472.317, 167.264, 471.653, 177.879, 481.605, 184.513, 494.873, 188.494, 516.103, 185.177, 520.083 )
+shape_range = Vector2( 0, 1 )
+trigger = false
+
+[node name="Stone" type="Sprite" parent="StaticBody2D20/CollisionPolygon2D"]
+
+transform/pos = Vector2( 152.153, 490.706 )
+transform/scale = Vector2( 0.807582, 1.03888 )
+texture = ExtResource( 15 )
+modulate = Color( 0.183594, 0.174271, 0.174271, 1 )
+
+[node name="Bone (1)" type="Sprite" parent="StaticBody2D20/CollisionPolygon2D/Stone"]
+
+transform/pos = Vector2( -6.43121, -15.8018 )
+transform/scale = Vector2( 0.743647, 0.593769 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D23" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 5628.34, -128.937 )
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 17 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D23"]
+
+build_mode = 0
+polygon = Vector2Array( 115.517, 517.429, 127.459, 483.595, 119.498, 469, 145.371, 457.058, 154.659, 472.317, 167.264, 471.653, 177.879, 481.605, 184.513, 494.873, 188.494, 516.103, 185.177, 520.083 )
+shape_range = Vector2( 0, 1 )
+trigger = false
+
+[node name="Stone" type="Sprite" parent="StaticBody2D23/CollisionPolygon2D"]
+
+transform/pos = Vector2( 152.153, 490.706 )
+transform/scale = Vector2( 0.807582, 1.03888 )
+texture = ExtResource( 15 )
+modulate = Color( 0.183594, 0.174271, 0.174271, 1 )
+
+[node name="Bone (1)" type="Sprite" parent="StaticBody2D23/CollisionPolygon2D/Stone"]
+
+transform/pos = Vector2( -6.43121, -15.8018 )
+transform/scale = Vector2( 0.743647, 0.593769 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 3029.05, -113.773 )
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 17 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D17"]
+
+build_mode = 0
+polygon = Vector2Array( 115.517, 517.429, 127.459, 483.595, 119.498, 469, 145.371, 457.058, 154.659, 472.317, 167.264, 471.653, 177.879, 481.605, 184.513, 494.873, 188.494, 516.103, 185.177, 520.083 )
+shape_range = Vector2( 0, 1 )
+trigger = false
+
+[node name="Stone" type="Sprite" parent="StaticBody2D17/CollisionPolygon2D"]
+
+transform/pos = Vector2( 152.153, 490.706 )
+transform/scale = Vector2( 0.807582, 1.03888 )
+texture = ExtResource( 15 )
+modulate = Color( 0.183594, 0.174271, 0.174271, 1 )
+
+[node name="Bone (1)" type="Sprite" parent="StaticBody2D17/CollisionPolygon2D/Stone"]
+
+transform/pos = Vector2( -6.43121, -15.8018 )
+transform/scale = Vector2( 0.743647, 0.593769 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D19" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 3643.81, -121.362 )
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 17 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D19"]
+
+build_mode = 0
+polygon = Vector2Array( 115.517, 517.429, 127.459, 483.595, 119.498, 469, 145.371, 457.058, 154.659, 472.317, 167.264, 471.653, 177.879, 481.605, 184.513, 494.873, 188.494, 516.103, 185.177, 520.083 )
+shape_range = Vector2( 0, 1 )
+trigger = false
+
+[node name="Stone" type="Sprite" parent="StaticBody2D19/CollisionPolygon2D"]
+
+transform/pos = Vector2( 152.153, 490.706 )
+transform/scale = Vector2( 0.807582, 1.03888 )
+texture = ExtResource( 15 )
+modulate = Color( 0.183594, 0.174271, 0.174271, 1 )
+
+[node name="Bone (1)" type="Sprite" parent="StaticBody2D19/CollisionPolygon2D/Stone"]
+
+transform/pos = Vector2( -6.43121, -15.8018 )
+transform/scale = Vector2( 0.743647, 0.593769 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 4621.48, -254.683 )
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 17 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D18"]
+
+editor/display_folded = true
+build_mode = 0
+polygon = Vector2Array( 115.517, 517.429, 127.459, 483.595, 119.498, 469, 145.371, 457.058, 154.659, 472.317, 167.264, 471.653, 177.879, 481.605, 184.513, 494.873, 188.494, 516.103, 185.177, 520.083 )
+shape_range = Vector2( 0, 1 )
+trigger = false
+
+[node name="Stone" type="Sprite" parent="StaticBody2D18/CollisionPolygon2D"]
+
+transform/pos = Vector2( 152.153, 490.706 )
+transform/scale = Vector2( 0.807582, 1.03888 )
+texture = ExtResource( 15 )
+modulate = Color( 0.183594, 0.174271, 0.174271, 1 )
+
+[node name="Bone (1)" type="Sprite" parent="StaticBody2D18/CollisionPolygon2D/Stone"]
+
+transform/pos = Vector2( -6.43121, -15.8018 )
+transform/scale = Vector2( 0.743647, 0.593769 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D21" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 7055.26, -121.586 )
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 17 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D21"]
+
+build_mode = 0
+polygon = Vector2Array( 115.517, 517.429, 127.459, 483.595, 119.498, 469, 145.371, 457.058, 154.659, 472.317, 167.264, 471.653, 177.879, 481.605, 184.513, 494.873, 188.494, 516.103, 185.177, 520.083 )
+shape_range = Vector2( 0, 1 )
+trigger = false
+
+[node name="Stone" type="Sprite" parent="StaticBody2D21/CollisionPolygon2D"]
+
+transform/pos = Vector2( 152.153, 490.706 )
+transform/scale = Vector2( 0.807582, 1.03888 )
+texture = ExtResource( 15 )
+modulate = Color( 0.183594, 0.174271, 0.174271, 1 )
+
+[node name="Bone (1)" type="Sprite" parent="StaticBody2D21/CollisionPolygon2D/Stone"]
+
+transform/pos = Vector2( -6.43121, -15.8018 )
+transform/scale = Vector2( 0.743647, 0.593769 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D22" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 7808.43, -263.851 )
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 17 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D22"]
+
+build_mode = 0
+polygon = Vector2Array( 115.517, 517.429, 127.459, 483.595, 119.498, 469, 145.371, 457.058, 154.659, 472.317, 167.264, 471.653, 177.879, 481.605, 184.513, 494.873, 188.494, 516.103, 185.177, 520.083 )
+shape_range = Vector2( 0, 1 )
+trigger = false
+
+[node name="Stone" type="Sprite" parent="StaticBody2D22/CollisionPolygon2D"]
+
+transform/pos = Vector2( 152.153, 490.706 )
+transform/scale = Vector2( 0.807582, 1.03888 )
+texture = ExtResource( 15 )
+modulate = Color( 0.183594, 0.174271, 0.174271, 1 )
+
+[node name="Bone (1)" type="Sprite" parent="StaticBody2D22/CollisionPolygon2D/Stone"]
+
+transform/pos = Vector2( -6.43121, -15.8018 )
+transform/scale = Vector2( 0.743647, 0.593769 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D 13" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 621.025, 37.6836 )
+input/pickable = false
+shapes/0/shape = SubResource( 21 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 1.50781, 4.52203 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 22 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 1.50781, 4.52203 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 23 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 1.50781, 4.52203 )
+shapes/2/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D 13"]
+
+transform/pos = Vector2( 1.50781, 4.52203 )
+build_mode = 0
+polygon = Vector2Array( 4895.7, 172.293, 4936.4, 191.888, 4919.82, 214.498, 4919.82, 220.528, 4873.09, 211.484, 4873.09, 211.484 )
+shape_range = Vector2( 0, 2 )
+trigger = false
+
+[node name="Bone (2)" type="Sprite" parent="StaticBody2D 13"]
+
+transform/pos = Vector2( 4892.69, 199.425 )
+texture = ExtResource( 17 )
+
+[node name="StaticBody2D 14" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 179.467, 103.308 )
+transform/scale = Vector2( 0.489028, 0.678952 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="coin1" type="Area2D" parent="."]
+
+transform/pos = Vector2( -279.981, 362.765 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614237, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="sprite" type="Sprite" parent="coin1"]
+
+visibility/self_opacity = 0.0
+transform/pos = Vector2( 514.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin1"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="SamplePlayer" type="SamplePlayer" parent="coin1"]
+
+config/polyphony = 1
+config/samples = SubResource( 25 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coin1"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/taken = SubResource( 26 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="coin2" type="Area2D" parent="."]
+
+transform/pos = Vector2( -210.643, 362.765 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614237, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin2"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin2"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin4" type="Area2D" parent="."]
+
+transform/pos = Vector2( 220.967, 276.923 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614237, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin4"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin4"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin6" type="Area2D" parent="."]
+
+transform/pos = Vector2( 280.696, 277.742 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614237, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin6"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin6"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin7" type="Area2D" parent="."]
+
+transform/pos = Vector2( 452.319, 160.065 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin7"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin7"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin8" type="Area2D" parent="."]
+
+transform/pos = Vector2( 527.636, 157.276 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin8"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin8"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin9" type="Area2D" parent="."]
+
+transform/pos = Vector2( 597.374, 160.065 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin9"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin9"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin10" type="Area2D" parent="."]
+
+transform/pos = Vector2( 915.378, 243.75 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin10"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin10"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin11" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1116.22, 243.75 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin11"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin11"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin12" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1637.86, 134.96 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin12"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin12"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin13" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2162.29, 134.96 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin13"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin13"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin14" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2865.25, 229.803 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin14"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin14"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin16" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3897.37, 174.013 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin16"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin16"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin17" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3816.47, 174.013 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin17"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin17"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin18" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3738.36, 176.802 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin18"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin18"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin15" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2580.72, 235.382 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin15"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin15"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin19" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4354.85, 115.433 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin19"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin19"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin20" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4430.16, 118.222 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin20"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin20"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin22" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4569.64, 118.222 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin22"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin22"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin23" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4636.59, 121.012 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin23"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin23"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin24" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4759.33, 123.801 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin24"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin24"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin26" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4823.48, 121.012 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin26"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin26"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin27" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5598.97, 422.279 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin27"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin27"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin28" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5668.71, 425.069 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin28"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin28"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin29" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5738.44, 425.069 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin29"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin29"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin30" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5808.18, 425.069 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin30"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin30"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin31" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5875.13, 425.069 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin31"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin31"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin32" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5944.87, 425.069 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin32"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin32"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin33" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5810.97, 187.96 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin33"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin33"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin34" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5852.81, 143.328 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin34"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin34"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin35" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5891.87, 101.485 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin35"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin35"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin36" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5942.08, 65.2217 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin36"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin36"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin37" type="Area2D" parent="."]
+
+transform/pos = Vector2( 6011.82, 54.0637 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin37"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin37"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin38" type="Area2D" parent="."]
+
+transform/pos = Vector2( 6536.24, 168.434 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin38"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin38"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin39" type="Area2D" parent="."]
+
+transform/pos = Vector2( 6589.24, 221.434 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin39"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin39"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin40" type="Area2D" parent="."]
+
+transform/pos = Vector2( 6589.24, 221.434 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin40"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin40"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin41" type="Area2D" parent="."]
+
+transform/pos = Vector2( 6653.4, 263.277 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin41"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin41"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin42" type="Area2D" parent="."]
+
+transform/pos = Vector2( 7046.72, 268.856 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin42"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin42"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin43" type="Area2D" parent="."]
+
+transform/pos = Vector2( 7082.99, 187.96 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin43"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin43"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin44" type="Area2D" parent="."]
+
+transform/pos = Vector2( 7152.73, 132.17 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin44"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin44"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin45" type="Area2D" parent="."]
+
+transform/pos = Vector2( 7241.99, 115.433 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin45"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin45"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin46" type="Area2D" parent="."]
+
+transform/pos = Vector2( 7331.25, 132.17 )
+input/pickable = true
+shapes/0/shape = SubResource( 24 )
+shapes/0/transform = Matrix32( 1.23367, 1.21445, -0.614236, 0.623958, 511.542, -31.5085 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="IceBox" type="Sprite" parent="coin46"]
+
+transform/pos = Vector2( 512.12, -30.7861 )
+transform/rot = -44.5502
+transform/scale = Vector2( 0.373002, 0.376009 )
+texture = ExtResource( 18 )
+modulate = Color( 0.25708, 0.632812, 0.606394, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin46"]
+
+transform/pos = Vector2( 511.542, -31.5085 )
+transform/rot = -44.5502
+transform/scale = Vector2( 1.73113, 0.875563 )
+shape = SubResource( 24 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coins" parent="." instance=ExtResource( 20 )]
+
+transform/pos = Vector2( -5.09302, -7.55261 )
+transform/scale = Vector2( 1.15553, 1 )
+
+[node name="StaticBody2D 15" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 5739.75, 429.631 )
+input/pickable = false
+shapes/0/shape = SubResource( 27 )
+shapes/0/transform = Matrix32( 1.08985, 0, 0, 4.92865, 21.877, 15.2343 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D 15"]
+
+transform/pos = Vector2( 21.877, 15.2343 )
+transform/scale = Vector2( 1.08985, 4.92865 )
+shape = SubResource( 27 )
+trigger = false
+_update_shape_index = 0
+
+[node name="player " parent="." instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 35.6817, 282.038 )
+transform/scale = Vector2( 0.207676, 0.200135 )
+
+[node name="win" type="Area2D" parent="."]
+
+transform/pos = Vector2( 9005.92, 137.886 )
+transform/rot = 6.7737
+transform/scale = Vector2( 2.79164, 1.98349 )
+input/pickable = true
+shapes/0/shape = SubResource( 28 )
+shapes/0/transform = Matrix32( 3.52841, 0, 0, 4.24775, -6.07129, 12.8075 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="win"]
+
+transform/pos = Vector2( -6.07129, 12.8075 )
+transform/scale = Vector2( 3.52841, 4.24775 )
+shape = SubResource( 28 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Skeleton" type="Sprite" parent="."]
+
+transform/pos = Vector2( 609.112, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16" type="Sprite" parent="."]
+
+transform/pos = Vector2( 629.561, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17" type="Sprite" parent="."]
+
+transform/pos = Vector2( 547.766, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton18" type="Sprite" parent="."]
+
+transform/pos = Vector2( 611.384, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton19" type="Sprite" parent="."]
+
+transform/pos = Vector2( 554.582, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton20" type="Sprite" parent="."]
+
+transform/pos = Vector2( 625.016, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton21" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1826.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton22" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2408.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton23" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1824.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton24" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2449.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton25" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1838.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton26" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2449.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton27" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1826.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton28" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2504.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton29" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1831.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton30" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2444.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton31" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2440.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 659.112, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 679.561, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton166" type="Sprite" parent="."]
+
+transform/pos = Vector2( 597.766, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 661.384, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1705" type="Sprite" parent="."]
+
+transform/pos = Vector2( 604.582, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 675.016, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17094" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1876.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2458.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170983" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1874.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170987 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2499.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709873" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1888.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709876" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2499.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709877" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1876.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709878" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2554.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709879" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1881.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709880" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2494.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709881" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2490.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 709.112, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 729.561, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton163" type="Sprite" parent="."]
+
+transform/pos = Vector2( 647.766, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 711.384, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1703" type="Sprite" parent="."]
+
+transform/pos = Vector2( 654.582, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709" type="Sprite" parent="."]
+
+transform/pos = Vector2( 725.016, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1710" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1926.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1711" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2508.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1712" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1924.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1713" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2549.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1714" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1938.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1715" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2549.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1716" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1926.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1717" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2604.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1718" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1931.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1719" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2544.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1720" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2540.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 769.112, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 789.561, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton168" type="Sprite" parent="."]
+
+transform/pos = Vector2( 707.766, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170 6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 771.384, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1707" type="Sprite" parent="."]
+
+transform/pos = Vector2( 714.582, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709 6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 785.016, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17097" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1986.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2568.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170986" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1984.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170987" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2609.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170988" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1998.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170989" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2609.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170990" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1986.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170991" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2664.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170992" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1991.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170993" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2604.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170994" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2600.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 819.112, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 839.561, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton165" type="Sprite" parent="."]
+
+transform/pos = Vector2( 757.766, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 821.384, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1704" type="Sprite" parent="."]
+
+transform/pos = Vector2( 764.582, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 835.016, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17093" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2036.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2618.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17099" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2034.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17100" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2659.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17101" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2048.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17102" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2659.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17103" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2036.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17104" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2714.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17105" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2041.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17106" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2654.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17107" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2650.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 869.112, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 889.561, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton169" type="Sprite" parent="."]
+
+transform/pos = Vector2( 807.766, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170 7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 871.384, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1708" type="Sprite" parent="."]
+
+transform/pos = Vector2( 814.582, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 885.016, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17096" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2086.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2668.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170985" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2084.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170987 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2709.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709875" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2098.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709876 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2709.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098764" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2086.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098765 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2764.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170987653" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2091.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170987654" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2704.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170987655" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2700.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 919.112, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 939.561, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1612" type="Sprite" parent="."]
+
+transform/pos = Vector2( 857.766, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 921.384, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16164" type="Sprite" parent="."]
+
+transform/pos = Vector2( 864.582, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 935.016, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161683" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2136.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161687" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2718.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161688" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2134.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161689" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2759.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161690" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2148.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161691" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2759.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161692" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2136.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161693" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2814.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161694" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2141.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161695" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2754.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161696" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2750.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 979.112, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 999.561, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1613" type="Sprite" parent="."]
+
+transform/pos = Vector2( 917.766, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 981.384, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16165" type="Sprite" parent="."]
+
+transform/pos = Vector2( 924.582, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 995.016, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161684" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2196.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161687 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2778.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616873" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2194.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616876" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2819.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616877" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2208.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616878" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2819.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616879" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2196.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616880" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2874.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616881" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2201.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616882" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2814.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616883" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2810.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1039.11, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1059.56, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton167" type="Sprite" parent="."]
+
+transform/pos = Vector2( 977.766, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1041.38, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1706" type="Sprite" parent="."]
+
+transform/pos = Vector2( 984.582, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1055.02, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17095" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2256.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2838.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170984" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2254.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170987 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2879.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709874" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2268.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1709876 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2879.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098763" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2256.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098765" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2934.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098766" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2261.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098767" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2874.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton17098768" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2870.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1099.11, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1119.56, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1611" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1037.77, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1101.38, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16163" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1044.58, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1115.02, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16169" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2316.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16170" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2898.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16171" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2314.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16172" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2939.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16173" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2328.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16174" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2939.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16175" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2316.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16176" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2994.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16177" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2321.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16178" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2934.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16179" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2930.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1159.11, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 14" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1179.56, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1615" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1097.77, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616 6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1161.38, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16167" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1104.58, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1175.02, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161686" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2376.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161687 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2958.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616875" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2374.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616876 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2999.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168764" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2388.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168765 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2999.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161687653" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2376.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161687654" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3054.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161687655" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2381.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161687656" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2994.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161687657" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2990.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1219.11, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1239.56, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1610" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1157.77, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1221.38, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1617" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1164.58, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1618" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1235.02, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1619" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2436.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1620" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3018.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1621" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2434.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1622" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3059.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1623" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2448.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1624" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3059.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1625" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2436.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1626" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3114.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1627" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2441.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1628" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3054.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1629" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3050.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1279.11, 570.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1299.56, 599.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton164" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1217.77, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton170" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1281.38, 642.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton171" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1224.58, 663.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton172" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1295.02, 702.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton173" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2496.94, 597.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton174" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3078.59, 586.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton175" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2494.67, 631.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton176" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3119.49, 622.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton177" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2508.3, 656.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton178" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3119.49, 652.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton179" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2496.94, 690.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton180" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3174.02, 697.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton181" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2501.49, 713.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton182" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3114.95, 672.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton183" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3110.4, 627.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 579.112, 594.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16 13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 599.561, 623.82 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1614" type="Sprite" parent="."]
+
+transform/pos = Vector2( 517.766, 646.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 581.384, 666.989 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16166" type="Sprite" parent="."]
+
+transform/pos = Vector2( 524.582, 687.438 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 595.016, 726.063 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161685" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1796.94, 621.548 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton161687 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2378.59, 610.187 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616874" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1794.67, 655.629 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton1616876 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2419.49, 646.541 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168763" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1808.3, 680.622 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168765" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2419.49, 676.077 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168766" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1796.94, 714.703 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168767" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2474.02, 721.519 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168768" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1801.49, 737.423 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168769" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2414.95, 696.526 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton16168770" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2410.4, 651.085 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton14" type="Sprite" parent="."]
+
+transform/pos = Vector2( 629.112, 594.283 )
+texture = ExtResource( 7 )
+
+[node name="Skeleton15" type="Sprite" parent="."]
+
+transform/pos = Vector2( 620.024, 592.011 )
+texture = ExtResource( 7 )
+
+[node name="Bone (1)" type="Sprite" parent="."]
+
+transform/pos = Vector2( 584.964, 578.206 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 623.055, 623.098 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 552.62, 673.084 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1879.51, 584.473 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2470.25, 582.201 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2429.35, 629.914 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)8" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1734.1, 652.635 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1859.06, 704.893 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2522.51, 684.444 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 584.964, 578.206 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)3 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 623.055, 623.098 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)34" type="Sprite" parent="."]
+
+transform/pos = Vector2( 552.62, 673.084 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)35 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1879.51, 584.473 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)353" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2470.25, 582.201 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)354" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2429.35, 629.914 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)355" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1734.1, 652.635 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)356" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1859.06, 704.893 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)357" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2522.51, 684.444 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 774.964, 568.206 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)1"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)3 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 813.055, 613.098 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)3 2"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)33" type="Sprite" parent="."]
+
+transform/pos = Vector2( 742.62, 663.084 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)33"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)35" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2069.51, 574.473 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)35"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)36" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2660.25, 572.201 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)36"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)37" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2619.35, 619.914 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)37"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)38" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1924.1, 642.635 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)38"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)39" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2049.06, 694.893 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)39"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)40" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2712.51, 674.444 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)40"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)2 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 972.219, 564.124 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)2 2"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)24 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1010.31, 609.017 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)24 2"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)243" type="Sprite" parent="."]
+
+transform/pos = Vector2( 939.875, 659.002 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)243"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)244" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2266.77, 570.392 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)244"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)245" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2857.5, 568.12 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)245"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)246" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2816.61, 615.833 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)246"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)247" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2121.35, 638.554 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)247"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)248" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2246.32, 690.811 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)248"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)249" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2909.76, 670.363 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)249"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)23" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1179, 565.485 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)23"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)24" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1217.09, 610.377 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)24"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)25" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1146.65, 660.363 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)25"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)26" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2473.54, 571.752 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)26"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)27" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3064.28, 569.48 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)27"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)28" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3023.38, 617.193 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)28"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)29" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2328.13, 639.914 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)29"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)30" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2453.09, 692.172 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)30"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (1)31" type="Sprite" parent="."]
+
+transform/pos = Vector2( 3116.54, 671.723 )
+texture = ExtResource( 16 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="Bone (2)" type="Sprite" parent="Bone (1)31"]
+
+transform/pos = Vector2( -136.945, 3.19812 )
+texture = ExtResource( 17 )
+modulate = Color( 0.253906, 0.206299, 0.206299, 1 )
+
+[node name="music" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 22 )
+stream/play = false
+stream/loop = true
+stream/volume_db = 0.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
+
+[node name="Idle__005" type="Sprite" parent="."]
+
+transform/pos = Vector2( 8950, 216.694 )
+transform/scale = Vector2( 0.22687, 0.219237 )
+texture = ExtResource( 23 )
+
+[connection signal="body_enter" from="death" to="." method="_on_death_body_enter"]
+
+[connection signal="body_enter" from="coin1" to="." method="_on_coin1_body_enter"]
+
+[connection signal="body_enter" from="coin2" to="." method="_on_coin2_body_enter"]
+
+[connection signal="body_enter" from="coin4" to="." method="_on_coin4_body_enter"]
+
+[connection signal="body_enter" from="coin6" to="." method="_on_coin6_body_enter"]
+
+[connection signal="body_enter" from="coin7" to="." method="_on_coin7_body_enter"]
+
+[connection signal="body_enter" from="coin8" to="." method="_on_coin8_body_enter"]
+
+[connection signal="body_enter" from="coin9" to="." method="_on_coin9_body_enter"]
+
+[connection signal="body_enter" from="coin10" to="." method="_on_coin10_body_enter"]
+
+[connection signal="body_enter" from="coin11" to="." method="_on_coin11_body_enter"]
+
+[connection signal="body_enter" from="coin12" to="." method="_on_coin12_body_enter"]
+
+[connection signal="body_enter" from="coin13" to="." method="_on_coin13_body_enter"]
+
+[connection signal="body_enter" from="coin14" to="." method="_on_coin14_body_enter"]
+
+[connection signal="body_enter" from="coin16" to="." method="_on_coin16_body_enter"]
+
+[connection signal="body_enter" from="coin17" to="." method="_on_coin17_body_enter"]
+
+[connection signal="body_enter" from="coin18" to="." method="_on_coin18_body_enter" flags=6]
+
+[connection signal="body_enter" from="coin15" to="." method="_on_coin15_body_enter"]
+
+[connection signal="body_enter" from="coin19" to="." method="_on_coin19_body_enter"]
+
+[connection signal="body_enter" from="coin20" to="." method="_on_coin20_body_enter"]
+
+[connection signal="body_enter" from="coin22" to="." method="_on_coin22_body_enter"]
+
+[connection signal="body_enter" from="coin23" to="." method="_on_coin23_body_enter"]
+
+[connection signal="body_enter" from="coin24" to="." method="_on_coin24_body_enter"]
+
+[connection signal="body_enter" from="coin26" to="." method="_on_coin26_body_enter"]
+
+[connection signal="body_enter" from="coin27" to="." method="_on_coin27_body_enter"]
+
+[connection signal="body_enter" from="coin28" to="." method="_on_coin28_body_enter"]
+
+[connection signal="body_enter" from="coin29" to="." method="_on_coin29_body_enter"]
+
+[connection signal="body_enter" from="coin30" to="." method="_on_coin30_body_enter"]
+
+[connection signal="body_enter" from="coin31" to="." method="_on_coin31_body_enter"]
+
+[connection signal="body_enter" from="coin32" to="." method="_on_coin32_body_enter"]
+
+[connection signal="body_enter" from="coin33" to="." method="_on_coin33_body_enter"]
+
+[connection signal="body_enter" from="coin34" to="." method="_on_coin34_body_enter"]
+
+[connection signal="body_enter" from="coin35" to="." method="_on_coin35_body_enter"]
+
+[connection signal="body_enter" from="coin36" to="." method="_on_coin36_body_enter"]
+
+[connection signal="body_enter" from="coin37" to="." method="_on_coin37_body_enter"]
+
+[connection signal="body_enter" from="coin38" to="." method="_on_coin38_body_enter"]
+
+[connection signal="body_enter" from="coin39" to="." method="_on_coin39_body_enter"]
+
+[connection signal="body_enter" from="coin40" to="." method="_on_coin40_body_enter"]
+
+[connection signal="body_enter" from="coin41" to="." method="_on_coin41_body_enter"]
+
+[connection signal="body_enter" from="coin42" to="." method="_on_coin42_body_enter"]
+
+[connection signal="body_enter" from="coin43" to="." method="_on_coin43_body_enter"]
+
+[connection signal="body_enter" from="coin44" to="." method="_on_coin44_body_enter"]
+
+[connection signal="body_enter" from="coin45" to="." method="_on_coin45_body_enter"]
+
+[connection signal="body_enter" from="coin46" to="." method="_on_coin46_body_enter"]
+
+[connection signal="body_enter" from="win" to="." method="_on_win_body_enter"]
+
+

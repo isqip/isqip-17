@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/animate.css">
+	<script type="text/javascript">
+  </script>
+	<style>
+  input:focus {
+    outline:none !important;
+}
+select:focus{
+    outline:none !important;
+
+}
+input[type=submit], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 30%;
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: blue;
+}
+div {
+    border-radius: 5px;
+    padding: 20px;
+}
+input{
+  border-radius: 50px!important;
+  border: 0px;
+}
+select{
+  border: 0px;
+  border-radius: 50px;
+  width:30%!important;
+
+}
+input[type=submit] {
+    width: 20%;
+    background-color: #252525;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    color: black;
+
+    background-color: white;
+}
+</style>
+
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/base.css"></head>
+<body style="background: linear-gradient(to right, #f03b55,#7933e1); color:white; font-family: Roboto, thin, sans-serif; font-size: 20px; ">
+
+      <article id="webslides" class="vertical">
+<center>
+<h1>Sign-Up</h1>
+<div>
+ 
+    <input type="text"  id="username" name="Username" placeholder="Username.." style="width: 30%;border-radius: 4px; border: 0px; padding: 14px 20px;
+    margin: 8px 0; "><br>
+    <input type="password"  id="password" name="Password" placeholder="Password.." style="width: 30%;border-radius: 4px; border: 0px; padding: 14px 20px;
+    margin: 8px 0; "><br>
+    
+  <label for="university">University:</label><br>
+    <select id="university" onclick="" name="university">
+      <option value="KTU">KTU</option>
+      
+    </select> <br>
+
+    <label for="institution">Institution:</label><br>
+    <select id="institution" onclick="" name="institution">
+      <option value="CEC">College of Engineering Chengannur (CEC)</option>
+      
+    </select><br>
+
+    <label for="stream">Stream:</label><br>
+    <select id="stream" onclick="" name="stream">
+      <option value="CSE">CSE</option>
+      </select><br>
+
+      <label for="semester">Semester:</label><br>
+    <select id="semester" onclick="" name="semester">
+      <option value="s1">S1</option>
+      </select><br>
+
+      <label for="division">Division(if any):</label><br>
+    <select id="division" onclick="" name="division">
+      <option value="D">D</option>
+      
+      
+      
+    </select><br>
+  
+    <a href="bunkUI-2.html"><input type="submit" onclick="alert('Your unique classroom ID is CECCSES1D'); alert('There is already a timetable set for this classroom by your friends. Should we use that?');" value="Submit"></a>
+  
+</div>
+</center>
+</head>
+</article>
+</body>
+</html>

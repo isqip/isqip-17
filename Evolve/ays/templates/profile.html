@@ -1,0 +1,43 @@
+profile{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@ your service- SignUp</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style/upstyle.css' %}">
+</head>
+<body id="body">
+<div >
+<div id="titleb">
+	<h1 id="name" >at your service</h1>
+	<h3 id="caption"> SignUp</h3>
+<table id="table">
+  	<tr >
+    	<td id="one"><a id="l1" href="">about</a></th>
+    	<td id="two"><a id="l2" href="">explore</a> </th> 
+    	<td id="thre"><a id="l3" href="">contact</th>
+  	</tr>
+ </table>
+	</div>
+
+	<div id="fblock">
+		<p>PROFILE</p>
+
+		
+    {% csrf_token %}
+    {{  user.id }}
+    
+    
+	</div>
+
+
+	
+	<div id="sblock">
+		<p id="stext">Text2</p>
+		{{ post.Name}}
+		<h2> esewg </h2>
+		{{post.Aadhar}}
+	</div>
+	</div>
+
+</body>
+</html>

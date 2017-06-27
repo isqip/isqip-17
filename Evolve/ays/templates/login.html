@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@ your service- LogIn</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style/logstyle.css' %}">
+</head>
+<body id="body">
+	<table id="table">
+		<tr>
+			<th id="loginc">
+				<div>
+					<form method="post" id="form">
+    					{% csrf_token %}
+    					{{ form.as_p }}
+    					<button class="button" type="submit">Log In </button>
+					</form>
+					
+				</div>
+			</th>
+			<th>
+				<div>
+					<h1 id="name" >at <br>your <br>service</h1>
+					<h3 id="caption"> LOG IN</h3>
+				</div>
+			</th>		
+		</tr>
+	</table>	
+</body>
+</html>

@@ -1,0 +1,776 @@
+<!doctype html>
+<html>
+<head>
+ <a href=""></a>
+  <title>Timetable</title>
+  <script type="text/javascript">
+    window.onload = alert('There is already a timetable set for this classroom by your friends. Should we use that?');
+    </script>
+    <style type="text/css">
+    body
+    {
+        font-family: sans-serif;
+        background: linear-gradient(to right, #f03b55,#7933e1);
+    }
+    table{
+      border: 0px!important;
+    }
+    th,td
+    {
+
+        margin: 0;
+        text-align: center;
+        border-collapse: collapse;
+        outline: 1px solid #f0f0f0;
+    }
+    td:focus{
+    outline:none !important;
+
+}
+    select{
+      border: none!important;
+      background-color: transparent;
+    }
+    input[type=submit] {
+    width: 20%;
+    background-color: #252525;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+}
+    td
+    {
+        padding: 5px 10px;
+    }
+
+    th
+    {
+        background: transparent;
+        color: white;
+        padding: 5px 10px;
+    }
+
+    td:hover
+    {
+        cursor: pointer;
+        background: #666;
+        color: white;
+    }
+    table{
+      border-radius: 50px;
+      border: none;
+    }
+    </style>
+
+</head>
+<body>
+    <!--<table width="80%" align="center" border="0">
+    <div id="head_nav">
+    <tr>
+        <th>Time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thrusday</th>
+        <th>Friday</th>
+    </tr>
+    <tr>
+     <th>HOUR-1</th>
+      <div>
+        <td class = "s"> 
+            <select>
+
+              <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option>  
+            </select>
+            <P ALIGN="center"></P>
+        </td>
+  
+        
+      </div>
+      <div>
+         <td class = "s">
+            <select>
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+            </select> 
+            <p ALIGN="center"></p>
+        </td>
+      </div>
+       
+
+        <td class = "s"> 
+           <select> 
+               <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+            </select> 
+            <P ALIGN="center"></P>
+        </td>  
+    
+        
+
+        <td class = "s"> 
+            <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+          </select> 
+          <P ALIGN="center"></P>
+        </td> 
+
+         <td class = "s"> 
+              <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+            </select> 
+            <P ALIGN="center"></P>
+        </td>
+             
+            
+        </div>
+
+    </tr>
+
+    <tr>
+       
+  <th>HOUR-2</td>
+        
+            <td class = "s"> 
+              <select> 
+               <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+            </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s">
+              <select> 
+               <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+             </select> 
+            <P ALIGN="center"></P>
+        </td>
+        <td>
+        <p class = "s"> 
+              <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+            </select> 
+            <P ALIGN="center"></P>
+        </p>
+        </td>
+        
+        <td class = "s"> 
+              <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+             </select> 
+            <P ALIGN="center"></P>
+        </td>
+        
+        <td class = "s"> 
+              <select> 
+               <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+            </select> 
+            <P ALIGN="center"></P>
+        </td>
+            
+        </div>
+    </tr>
+
+    <tr>
+        <th>HOUR-3</td>
+        
+        <td class = "s"> 
+              <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+             </select> 
+            <P ALIGN="center"></P>
+        </td>
+        
+
+        <td class = "s"> 
+               <select>
+              <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option>        
+             </select> 
+            <P ALIGN="center"></P>
+        </td>
+        
+        <td class = "s"> 
+              <select> 
+               <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+            </select> 
+            <P ALIGN="center"></P>
+        </td>
+        
+        <td class = "s"> 
+              <select> 
+               <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+             </select> 
+            <P ALIGN="center"></P>
+        </td>
+        
+
+        <td class = "s"> 
+              <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+             </select> 
+            <P ALIGN="center"></P>
+        </td>
+            
+
+        </div>
+    </tr>
+
+    <tr>
+        <th>HOUR-4</td>
+        
+            <td class = "s"> 
+              <select>   
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+             </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s"> 
+              <select> 
+               <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+               </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s"> 
+              <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+             </select> 
+            <P ALIGN="center"></p>
+        </td>
+
+        <td class = "s"> 
+              <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+            
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s"> 
+              <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+             </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+
+
+        </div>
+    </tr>
+
+    <tr>
+        <th>HOUR-5</td>
+        
+           <td class = "s"> 
+              <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+             </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s">
+              <select> 
+               <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+              </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s"> 
+              <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+             </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s"> 
+          <select> 
+               <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+         </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s"> 
+         <select>    
+               <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+          </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+
+            
+        </div>
+    </tr>
+     <tr>
+        <th>HOUR-6</td>
+        
+<td class = "s">
+           <select>  
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+          </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s">
+           <select> 
+               <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+            </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s"> 
+                    <select> 
+                <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+               </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s"> 
+            <select> 
+              <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option>   
+            </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+        <td class = "s"> 
+            <select> 
+              <option value="CAL">CALCULUS</option> 
+              <option value="BEE">BASICS OF ELECTRICAL ENGINEERING</option>
+              <option value="BCE">BASICS OF CIVIL ENGINEERING</option>
+              <option  value="BEE">BASICS OF ELECTRONICS ENGINEERING</option>
+              <option value="BME">BASICS OF MECHANICAL ENGINEERING</option>  
+              <option value="EP">ENGINEERING PHYSICS</option>
+              <option value="EC">ENGINEERING CHEMISTRY</option>
+              <option value="EG">ENGINEERING GRAPHICS</option>
+              <option value="EM">ENGINEERING MECHANICS</option>
+              <option value="EW">ELECTRICAL WORKSHOP</option>
+              <option value="CW">CIVIL WORKSHOP</option>
+              <option value="PL">PHYSICS LAB</option>
+              <option value="CHL">CHEMISTRY LAB</option>
+              <option value="CL">COMPUTER LAB</option>
+              <option value="MW">MECHANICAL WORKSHOP</option> 
+            </select> 
+            <P ALIGN="center"></P>
+        </td>
+
+
+        </div>
+    </tr>
+</table>-->
+<div>
+   <center><input type="submit" onclick="" > </center>  <style type="text/css" margin-top: 100px;>
+   </style>
+   </div>
+
+</body>
+</html>

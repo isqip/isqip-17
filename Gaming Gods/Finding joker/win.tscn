@@ -1,0 +1,117 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://win.gd" type="Script" id=1]
+[ext_resource path="res://dLZ5oMU.png" type="Texture" id=2]
+[ext_resource path="res://Batman-Joker-PNG-Transparent-Picture.png" type="Texture" id=3]
+[ext_resource path="res://fonts/zerovelocity.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://fonts/CONTINUE___.fnt" type="BitmapFont" id=5]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "scale"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect/scale")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.5, 0.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 477, 295 ), Vector2( 106, 149 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="dLZ5oMU" type="Sprite" parent="."]
+
+transform/pos = Vector2( 518.429, 299.443 )
+transform/scale = Vector2( 0.403736, 0.389184 )
+texture = ExtResource( 2 )
+
+[node name="Batman-Joker-PNG-Transparent-Picture" type="Sprite" parent="."]
+
+transform/pos = Vector2( 930.23, 356.35 )
+transform/scale = Vector2( 0.716865, 0.688778 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 106.0
+margin/top = 149.0
+margin/right = 2533.0
+margin/bottom = 440.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.988281, 0.0270233, 0.0270233, 1 )
+text = "        Come dude
+Follow me  Ha Ha"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/scale = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "scale"
+
+[node name="Button" type="Button" parent="."]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 140.0
+margin/top = 440.0
+margin/right = 319.0
+margin/bottom = 472.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+
+[node name="Label" type="Label" parent="Button"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 17.0
+margin/top = 6.0
+margin/right = 176.0
+margin/bottom = 32.0
+custom_fonts/font = ExtResource( 5 )
+text = "Follow"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="pressed" from="Button" to="." method="_on_restart"]
+
+

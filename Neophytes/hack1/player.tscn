@@ -1,0 +1,258 @@
+[gd_scene load_steps=102 format=1]
+
+[ext_resource path="res://player.gd" type="Script" id=1]
+[ext_resource path="res://NinjaGirl/png/Attack__000.png" type="Texture" id=2]
+[ext_resource path="res://NinjaGirl/png/Attack__001.png" type="Texture" id=3]
+[ext_resource path="res://NinjaGirl/png/Attack__002.png" type="Texture" id=4]
+[ext_resource path="res://NinjaGirl/png/Attack__003.png" type="Texture" id=5]
+[ext_resource path="res://NinjaGirl/png/Attack__004.png" type="Texture" id=6]
+[ext_resource path="res://NinjaGirl/png/Attack__005.png" type="Texture" id=7]
+[ext_resource path="res://NinjaGirl/png/Attack__006.png" type="Texture" id=8]
+[ext_resource path="res://NinjaGirl/png/Attack__007.png" type="Texture" id=9]
+[ext_resource path="res://NinjaGirl/png/Attack__008.png" type="Texture" id=10]
+[ext_resource path="res://NinjaGirl/png/Attack__009.png" type="Texture" id=11]
+[ext_resource path="res://NinjaGirl/png/Dead__000.png" type="Texture" id=12]
+[ext_resource path="res://NinjaGirl/png/Dead__001.png" type="Texture" id=13]
+[ext_resource path="res://NinjaGirl/png/Dead__002.png" type="Texture" id=14]
+[ext_resource path="res://NinjaGirl/png/Dead__003.png" type="Texture" id=15]
+[ext_resource path="res://NinjaGirl/png/Dead__004.png" type="Texture" id=16]
+[ext_resource path="res://NinjaGirl/png/Dead__005.png" type="Texture" id=17]
+[ext_resource path="res://NinjaGirl/png/Dead__006.png" type="Texture" id=18]
+[ext_resource path="res://NinjaGirl/png/Dead__007.png" type="Texture" id=19]
+[ext_resource path="res://NinjaGirl/png/Dead__008.png" type="Texture" id=20]
+[ext_resource path="res://NinjaGirl/png/Dead__009.png" type="Texture" id=21]
+[ext_resource path="res://NinjaGirl/png/Idle__000.png" type="Texture" id=22]
+[ext_resource path="res://NinjaGirl/png/Idle__001.png" type="Texture" id=23]
+[ext_resource path="res://NinjaGirl/png/Idle__002.png" type="Texture" id=24]
+[ext_resource path="res://NinjaGirl/png/Idle__003.png" type="Texture" id=25]
+[ext_resource path="res://NinjaGirl/png/Idle__004.png" type="Texture" id=26]
+[ext_resource path="res://NinjaGirl/png/Idle__005.png" type="Texture" id=27]
+[ext_resource path="res://NinjaGirl/png/Idle__006.png" type="Texture" id=28]
+[ext_resource path="res://NinjaGirl/png/Idle__007.png" type="Texture" id=29]
+[ext_resource path="res://NinjaGirl/png/Idle__008.png" type="Texture" id=30]
+[ext_resource path="res://NinjaGirl/png/Idle__009.png" type="Texture" id=31]
+[ext_resource path="res://NinjaGirl/png/Jump_Attack__000.png" type="Texture" id=32]
+[ext_resource path="res://NinjaGirl/png/Jump_Attack__001.png" type="Texture" id=33]
+[ext_resource path="res://NinjaGirl/png/Jump_Attack__002.png" type="Texture" id=34]
+[ext_resource path="res://NinjaGirl/png/Jump_Attack__003.png" type="Texture" id=35]
+[ext_resource path="res://NinjaGirl/png/Jump_Attack__004.png" type="Texture" id=36]
+[ext_resource path="res://NinjaGirl/png/Jump_Attack__005.png" type="Texture" id=37]
+[ext_resource path="res://NinjaGirl/png/Jump_Attack__006.png" type="Texture" id=38]
+[ext_resource path="res://NinjaGirl/png/Jump_Attack__007.png" type="Texture" id=39]
+[ext_resource path="res://NinjaGirl/png/Jump_Attack__008.png" type="Texture" id=40]
+[ext_resource path="res://NinjaGirl/png/Jump_Attack__009.png" type="Texture" id=41]
+[ext_resource path="res://NinjaGirl/png/Jump_Throw__000.png" type="Texture" id=42]
+[ext_resource path="res://NinjaGirl/png/Jump_Throw__001.png" type="Texture" id=43]
+[ext_resource path="res://NinjaGirl/png/Jump_Throw__002.png" type="Texture" id=44]
+[ext_resource path="res://NinjaGirl/png/Jump_Throw__003.png" type="Texture" id=45]
+[ext_resource path="res://NinjaGirl/png/Jump_Throw__004.png" type="Texture" id=46]
+[ext_resource path="res://NinjaGirl/png/Jump_Throw__005.png" type="Texture" id=47]
+[ext_resource path="res://NinjaGirl/png/Jump_Throw__006.png" type="Texture" id=48]
+[ext_resource path="res://NinjaGirl/png/Jump_Throw__007.png" type="Texture" id=49]
+[ext_resource path="res://NinjaGirl/png/Jump_Throw__008.png" type="Texture" id=50]
+[ext_resource path="res://NinjaGirl/png/Jump_Throw__009.png" type="Texture" id=51]
+[ext_resource path="res://NinjaGirl/png/Jump__000.png" type="Texture" id=52]
+[ext_resource path="res://NinjaGirl/png/Jump__001.png" type="Texture" id=53]
+[ext_resource path="res://NinjaGirl/png/Jump__002.png" type="Texture" id=54]
+[ext_resource path="res://NinjaGirl/png/Jump__003.png" type="Texture" id=55]
+[ext_resource path="res://NinjaGirl/png/Jump__004.png" type="Texture" id=56]
+[ext_resource path="res://NinjaGirl/png/Jump__005.png" type="Texture" id=57]
+[ext_resource path="res://NinjaGirl/png/Jump__006.png" type="Texture" id=58]
+[ext_resource path="res://NinjaGirl/png/Jump__007.png" type="Texture" id=59]
+[ext_resource path="res://NinjaGirl/png/Jump__008.png" type="Texture" id=60]
+[ext_resource path="res://NinjaGirl/png/Jump__009.png" type="Texture" id=61]
+[ext_resource path="res://NinjaGirl/png/Kunai.png" type="Texture" id=62]
+[ext_resource path="res://NinjaGirl/png/Run__000.png" type="Texture" id=63]
+[ext_resource path="res://NinjaGirl/png/Run__001.png" type="Texture" id=64]
+[ext_resource path="res://NinjaGirl/png/Run__002.png" type="Texture" id=65]
+[ext_resource path="res://NinjaGirl/png/Run__003.png" type="Texture" id=66]
+[ext_resource path="res://NinjaGirl/png/Run__004.png" type="Texture" id=67]
+[ext_resource path="res://NinjaGirl/png/Run__005.png" type="Texture" id=68]
+[ext_resource path="res://NinjaGirl/png/Run__006.png" type="Texture" id=69]
+[ext_resource path="res://NinjaGirl/png/Run__007.png" type="Texture" id=70]
+[ext_resource path="res://NinjaGirl/png/Run__008.png" type="Texture" id=71]
+[ext_resource path="res://NinjaGirl/png/Run__009.png" type="Texture" id=72]
+[ext_resource path="res://NinjaGirl/png/Slide__000.png" type="Texture" id=73]
+[ext_resource path="res://NinjaGirl/png/Slide__001.png" type="Texture" id=74]
+[ext_resource path="res://NinjaGirl/png/Slide__002.png" type="Texture" id=75]
+[ext_resource path="res://NinjaGirl/png/Slide__003.png" type="Texture" id=76]
+[ext_resource path="res://NinjaGirl/png/Slide__004.png" type="Texture" id=77]
+[ext_resource path="res://NinjaGirl/png/Slide__005.png" type="Texture" id=78]
+[ext_resource path="res://NinjaGirl/png/Slide__006.png" type="Texture" id=79]
+[ext_resource path="res://NinjaGirl/png/Slide__007.png" type="Texture" id=80]
+[ext_resource path="res://NinjaGirl/png/Slide__008.png" type="Texture" id=81]
+[ext_resource path="res://NinjaGirl/png/Slide__009.png" type="Texture" id=82]
+[ext_resource path="res://NinjaGirl/png/Throw__000.png" type="Texture" id=83]
+[ext_resource path="res://NinjaGirl/png/Throw__001.png" type="Texture" id=84]
+[ext_resource path="res://NinjaGirl/png/Throw__002.png" type="Texture" id=85]
+[ext_resource path="res://NinjaGirl/png/Throw__003.png" type="Texture" id=86]
+[ext_resource path="res://NinjaGirl/png/Throw__004.png" type="Texture" id=87]
+[ext_resource path="res://NinjaGirl/png/Throw__005.png" type="Texture" id=88]
+[ext_resource path="res://NinjaGirl/png/Throw__006.png" type="Texture" id=89]
+[ext_resource path="res://NinjaGirl/png/Throw__007.png" type="Texture" id=90]
+[ext_resource path="res://NinjaGirl/png/Throw__008.png" type="Texture" id=91]
+[ext_resource path="res://NinjaGirl/png/Throw__009.png" type="Texture" id=92]
+[ext_resource path="res://sound/idle.smp" type="Sample" id=93]
+[ext_resource path="res://sound/jump.wav" type="Sample" id=94]
+[ext_resource path="res://sound/run.wav" type="Sample" id=95]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=3]
+
+length = 0.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 20, 29 ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource/name = "jump"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 50, 59 ]
+}
+
+[sub_resource type="Animation" id=5]
+
+length = 0.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 61, 70 ]
+}
+
+[sub_resource type="SampleLibrary" id=6]
+
+samples/idle = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 93 )
+}
+samples/jump = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 94 )
+}
+samples/run = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 95 )
+}
+
+[node name="player" type="KinematicBody2D"]
+
+transform/pos = Vector2( -1.03708, -4.24512 )
+transform/scale = Vector2( 0.967591, 0.86734 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 4.00597, 0, 0, 6.69082, 16.6294, 21.8477 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+
+transform/pos = Vector2( 14.5424, 16.5941 )
+transform/scale = Vector2( 0.24506, 0.284894 )
+frames = SubResource( 2 )
+animation = "default"
+frame = 50
+
+[node name="anim" type="AnimationPlayer" parent="sprite"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/idle = SubResource( 3 )
+anims/jump = SubResource( 4 )
+anims/run = SubResource( 5 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="sprite"]
+
+transform/pos = Vector2( 38.7023, -19.5828 )
+transform/scale = Vector2( 1.21342, 1.5 )
+offset = Vector2( 350, 130 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 16.6294, 21.8477 )
+transform/scale = Vector2( 4.00597, 6.69082 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="sound" type="SamplePlayer2D" parent="."]
+
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 2048.0
+params/attenuation/distance_exp = 1.0
+config/polyphony = 1
+config/samples = SubResource( 6 )
+config/pitch_random = 0.0
+
+

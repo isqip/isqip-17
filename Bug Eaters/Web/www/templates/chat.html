@@ -1,0 +1,21 @@
+<ion-view title="Chat" id="page2">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-android-more-vertical"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <div class="list card">
+
+  <a href="#" class="item item-icon-left" ng-repeat="item in chat">
+
+    <div class="item item-avatar">
+    <img src="avatar.png">
+    <h2>{{item.name}}</h2>
+    
+    <br>
+    {{item.msg}}
+    </div>
+  </a>
+  </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

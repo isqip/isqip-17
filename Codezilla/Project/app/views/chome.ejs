@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%- title %></title>
+	<link rel="stylesheet" type="text/css" href="/css/newindexcss.css">
+    <script src="/js/axios.min.js"></script>
+</head>
+<body>
+
+<div id="contact-form">
+		   <form method="post" action="/chome/search" id="locosearch" >
+			
+			<div>		          
+		      <label for="item">
+		      <span>enter your item: </span>
+			      <select id="item" name="item" tabindex="4">   
+			         <option value="none">select item</option>
+                      <% list.forEach(function(x){ %>
+                          <option value="<%- x._id %>"><%- x.name %></option>  
+                      <% }); %>
+			      </select>
+		      </label>
+			</div>
+			<div>
+		      <label for="location">
+		      	<span class="required"> enter your location:</span>
+		      	<input type="text" id="location" name="location" value="" placeholder="Your location" tabindex="2" required="required" />
+		      </label>  
+			</div>
+               <div id="map-data"></div>
+			<div>		           
+		      <button id="mapSubmit" >FIND</button> 
+			</div>
+		   </form>
+
+	</div>
+               <script>
+    var locationForm = document.getElementById('mapSubmit');
+    locationForm.addEventListener('click', geocode);
+    function geocode(e){
+      e.preventDefault();
+
+      var location = document.getElementById('location').value;
+
+      axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+        params:{
+          address:location,
+          key:'AIzaSyDNP8RBSQpJ9TTRcRlgY1CfShdJbSVNkoc'
+        }
+      })
+      .then(function(response){
+        let lat = response.data.results[0].geometry.location.lat;
+        let lng = response.data.results[0].geometry.location.lng;
+          let latlang = new google.maps.LatLng(lat, lng);
+          let bounds = new google.maps.Circle({center: latlang, radius: 2000}).getBounds();
+          let bound =  JSON.stringify(bounds);
+          bounds = JSON.parse(bound);
+          var lng1 = document.createElement('input');
+            lng1.type = "text";
+            lng1.hidden = "true";
+            lng1.name = "long1";
+            lng1.value = bounds.west;
+          var lng2 = document.createElement('input');
+            lng2.type = "text";
+            lng2.hidden = "true";
+            lng2.name = "long2";
+            lng2.value = bounds.east;
+          var lat1 = document.createElement('input');
+            lat1.type = "text";
+            lat1.hidden = "true";
+            lat1.name = "lat1";
+            lat1.value = bounds.south;
+          var lat2 = document.createElement('input');
+            lat2.type = "text";
+            lat2.hidden = "true";
+            lat2.name = "lat2";
+            lat2.value = bounds.north;
+          let mapData = document.getElementById('map-data');
+          mapData.appendChild(lng1);
+          mapData.appendChild(lng2);
+          mapData.appendChild(lat1);
+          mapData.appendChild(lat2);
+          document.getElementById('locosearch').submit();
+      })
+      .catch(function(error){
+        console.log(error);
+      });
+    }            //end
+       
+               </script>
+               <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNP8RBSQpJ9TTRcRlgY1CfShdJbSVNkoc"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<% include header %>
+
+	<body>
+		<% for(var i = 0; i< disease.length; i++){ %>
+		<% console.log(students[i]._id); %>
+		<tr>
+			<td><%= i + 1 %></td>
+			<td><%= disease[i].symptomId %></td>
+			<td><%= disease[i].diseaseIdList %></td>
+			<td><a href= "/student/delete/<%=students[i]._id %>" class="btn btn-danger">Delete</a></td>
+		</tr>
+		<% } %>
+	</body>
+
+<% include footer %>

@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://coin.gd" type="Script" id=1]
+[ext_resource path="res://Star_Coin..png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 12.3679 )
+
+[node name="coin" type="Area2D"]
+
+transform/pos = Vector2( 3.38696, -1.77108 )
+transform/scale = Vector2( 2.12859, 2.04414 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1.39759, 0, 0, 1.23116, -0.789986, 2.40446 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+
+[node name="coinn" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1.1179, 1.35863 )
+transform/scale = Vector2( 0.08737, 0.0890265 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( -0.789986, 2.40446 )
+transform/scale = Vector2( 1.39759, 1.23116 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="." to="." method="_on_coin_body_enter"]
+
+

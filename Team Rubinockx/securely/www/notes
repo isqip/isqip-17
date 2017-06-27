@@ -1,0 +1,2 @@
+ng-mode="task.title"
+console.log(task)//debuging

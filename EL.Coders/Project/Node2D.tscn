@@ -1,0 +1,198 @@
+[gd_scene load_steps=17 format=1]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+[ext_resource path="res://green-square-copy.jpg" type="Texture" id=2]
+[ext_resource path="res://newroiad.jpg" type="Texture" id=3]
+[ext_resource path="res://ca.gd" type="Script" id=4]
+[ext_resource path="res://Sign_1.png" type="Texture" id=5]
+[ext_resource path="res://Bush (4).png" type="Texture" id=6]
+[ext_resource path="res://Tree_1.png" type="Texture" id=7]
+[ext_resource path="res://Sign_2.png" type="Texture" id=8]
+[ext_resource path="res://Tree_2.png" type="Texture" id=9]
+[ext_resource path="res://0601be7cfb3b91cb15ef6672b46ecdcc (copy).jpg" type="Texture" id=10]
+[ext_resource path="res://1357588068-2400px - Copy.png" type="Texture" id=11]
+[ext_resource path="res://garbage-40357_960_720.png" type="Texture" id=12]
+[ext_resource path="res://images.png" type="Texture" id=13]
+[ext_resource path="res://tap only.png" type="Texture" id=14]
+[ext_resource path="res://drop only.png" type="Texture" id=15]
+[ext_resource path="res://Stone.png" type="Texture" id=16]
+
+[node name="Node2D" type="Node2D"]
+
+transform/rot = 0.0326059
+script/script = ExtResource( 1 )
+
+[node name="green-square-copy" type="Sprite" parent="."]
+
+transform/pos = Vector2( 516.365, -290.306 )
+transform/scale = Vector2( 2.54364, 4.43761 )
+texture = ExtResource( 2 )
+
+[node name="newroiad" type="Sprite" parent="."]
+
+transform/pos = Vector2( 245.818, 164.513 )
+transform/scale = Vector2( 0.595266, 1 )
+texture = ExtResource( 3 )
+
+[node name="newroiad 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 726.084, 375.634 )
+transform/rot = -35.4622
+transform/scale = Vector2( 1.02383, 1 )
+texture = ExtResource( 3 )
+
+[node name="newroiad 3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 69.4952, -111.109 )
+transform/rot = -90.1981
+transform/scale = Vector2( 0.86771, 1 )
+texture = ExtResource( 3 )
+
+[node name="newroiad 4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 393.539, -382.138 )
+texture = ExtResource( 3 )
+
+[node name="newroiad 5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 717.646, -511.947 )
+transform/rot = -89.8512
+transform/scale = Vector2( 0.457324, 1 )
+texture = ExtResource( 3 )
+
+[node name="newroiad 6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 396.307, -703.448 )
+transform/rot = -10.5908
+texture = ExtResource( 3 )
+
+[node name="newroiad 7" type="Sprite" parent="."]
+
+transform/pos = Vector2( 80.0781, -957.881 )
+transform/rot = -90.5289
+transform/scale = Vector2( 0.649651, 1 )
+texture = ExtResource( 3 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+motion/scale = Vector2( 1, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 2.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+script/script = ExtResource( 4 )
+
+[node name="Sign_1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 352.027, -507.627 )
+transform/scale = Vector2( 2.06484, 2.15586 )
+texture = ExtResource( 5 )
+
+[node name="Bush (4)" type="Sprite" parent="."]
+
+transform/pos = Vector2( 375.765, -454.197 )
+transform/scale = Vector2( 1.3105, 1.57782 )
+texture = ExtResource( 6 )
+
+[node name="Tree_1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 507.36, -812.413 )
+texture = ExtResource( 7 )
+
+[node name="Sign_2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 975.542, 475.743 )
+transform/scale = Vector2( -1.41124, 1.40476 )
+texture = ExtResource( 8 )
+
+[node name="Tree_2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 407.257, -942.274 )
+texture = ExtResource( 9 )
+
+[node name="Tree_1 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 632.732, -813.67 )
+texture = ExtResource( 7 )
+
+[node name="Sign_1 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 321.29, -886.128 )
+transform/scale = Vector2( 2.74092, 2.92169 )
+texture = ExtResource( 5 )
+
+[node name="0601be7cfb3b91cb15ef6672b46ecdcc (copy)" type="Sprite" parent="."]
+
+transform/pos = Vector2( 63.2782, 528.629 )
+transform/scale = Vector2( 0.469932, 0.573022 )
+texture = ExtResource( 10 )
+
+[node name="1357588068-2400px - Copy" type="Sprite" parent="."]
+
+transform/pos = Vector2( 148.383, 460.157 )
+transform/scale = Vector2( 0.22064, 0.124144 )
+texture = ExtResource( 11 )
+
+[node name="garbage-40357_960_720" type="Sprite" parent="."]
+
+transform/pos = Vector2( 214.102, 8.00043 )
+transform/scale = Vector2( 0.278545, 0.304563 )
+texture = ExtResource( 12 )
+
+[node name="images" type="Sprite" parent="."]
+
+transform/pos = Vector2( 924.248, -299.647 )
+transform/scale = Vector2( 0.610635, 0.498171 )
+texture = ExtResource( 13 )
+
+[node name="tap only" type="Sprite" parent="."]
+
+transform/pos = Vector2( 474.673, -573.661 )
+transform/scale = Vector2( 0.402777, 0.341956 )
+texture = ExtResource( 14 )
+
+[node name="drop only" type="Sprite" parent="."]
+
+transform/pos = Vector2( 517.416, -491.577 )
+transform/scale = Vector2( 0.524517, 0.448238 )
+texture = ExtResource( 15 )
+
+[node name="Stone" type="Sprite" parent="."]
+
+transform/pos = Vector2( 258.108, -469.153 )
+transform/scale = Vector2( 1.9581, 1.81824 )
+texture = ExtResource( 16 )
+
+

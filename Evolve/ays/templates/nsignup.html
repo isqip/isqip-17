@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@ your service- Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style/signupstyle.css' %}">
+</head>
+<body id="body">
+	<table id="table">
+		<tr>
+			<th id="loginc">
+				<div>
+					<form method="post" id="form">
+    					{% csrf_token %}
+    					<h3 id="addr">Address</h3>
+    					{{ details_form.as_p }}
+    					{{ services_form.as_p }}
+    					<button class="button" type="submit">Sign Up </button>
+					</form>
+					
+				</div>
+			</th>
+			<th>
+				<div>
+					<h1 id="name" >at <br>your <br>service</h1>
+					<h3 id="caption"> SIGN UP</h3>
+				</div>
+			</th>		
+		</tr>
+	</table>	
+</body>
+</html>

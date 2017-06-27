@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign-Up/Login Form</title>
+  <link href='/css/css.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+<style>
+    #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          
+          <form id="data-form" action="/signup/customer" method="post">
+
+          <div class="field-wrap" style="height:50px">
+            <label>
+              Name<span class="req">*</span>
+            </label>
+            <input type="text"required style="color:white" name="name" autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap" style="height:50px">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required style="color:white" name="email" autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap" style="height:50px">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required style="color:white" name="pass" autocomplete="off"/>
+          </div>
+          <div id="modal-data"></div>
+          
+          <button type="submit" class="button button-block">I am a Customer</button><br>
+          <button type="button" id="retailer" class="button button-block" data-toggle="modal" data-target="#myModal">I am a Retailer</button>
+          
+          </form>
+
+        </div>
+        
+        <div id="login">   
+          
+          <form action="/login" method="post">
+          
+            <div class="field-wrap" style="height:50px">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required style="color:white" name="email" autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap" style="height:50px">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required style="color:white" name="pass" autocomplete="off"/>
+          </div>
+          
+          <button class="button button-block"/>Log In</button>
+          
+          </form>
+
+        </div>
+        
+      </div>
+    
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Enter Details of Your Store</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <label for="Store Name">Store Name</label>
+            <input type="text" id="storename" class="form-control" placeholder="Store Name">
+        </div>
+          <div class="form-group">
+            <label for="Location">Location</label>
+            <input type="text" id="location" class="form-control" placeholder="Location">
+              <input type="button" class="btn btn-default" id="locSearch" value="Search"/>
+        </div>
+          <div class="form-group">
+              <div id="map"></div>
+          </div>
+          <input type="button" class="btn btn-default" id="modalSubmit" value="Submit">
+        <script>
+     var myMarker = "";
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: new google.maps.LatLng(35.137879, -82.836914),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        myMarker = new google.maps.Marker({
+            position: new google.maps.LatLng(47.651968, 9.478485),
+            draggable: true
+        });
+        map.setCenter(myMarker.position);
+        myMarker.setMap(map);
+          var locationForm = document.getElementById('locSearch');
+    locationForm.addEventListener('click', geocode);
+            function geocode(e){
+      e.preventDefault();
+
+      var location = document.getElementById('location').value;
+
+      axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+        params:{
+          address:location,
+          key:'AIzaSyA03bM2V1AT4Vb7nFfmLWYp6HZnMvUM5Vc'
+        }
+      })
+      .then(function(response){
+        let lat = response.data.results[0].geometry.location.lat;
+        let lng = response.data.results[0].geometry.location.lng;
+          let latlang = new google.maps.LatLng(lat, lng);
+        myMarker.setPosition(latlang);
+          map.panTo(latlang);
+      })
+      .catch(function(error){
+        console.log(error);
+      });
+    }
+      }            //end
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNP8RBSQpJ9TTRcRlgY1CfShdJbSVNkoc&callback=initMap">
+    </script>
+      </div>
+    </div>
+
+  </div>
+</div>
+      
+</div>
+  <script src='/js/jquery-3.2.1.min.js'></script>
+
+    <script src="js/index.js"></script>
+<script>
+    var retailerbut = document.getElementById('retailer');
+    retailerbut.addEventListener('click', function(){
+        setTimeout(initMap, 2000);
+    });
+    var modalSubmit = document.getElementById('modalSubmit');
+    modalSubmit.addEventListener('click', function(){
+        var forms = document.getElementById('data-form');
+        forms.action="/signup/retailer";
+        var Storename = document.createElement('input');
+        Storename.type = "text";
+        Storename.hidden = "true";
+        Storename.name = "storename";
+        Storename.value = document.getElementById('storename').value;
+        document.getElementById('modal-data').appendChild(Storename);
+        var lat = document.createElement('input');
+        lat.type="text";
+        lat.hidden = "true";
+        lat.name = "lat";
+        lat.value = myMarker.getPosition().lat();
+        document.getElementById('modal-data').appendChild(lat);
+        var lng = document.createElement('input');
+        lng.type = "text";
+        lng.hidden = "true";
+        lng.name = "long";
+        lng.value = myMarker.getPosition().lng();
+        var latlang = new google.maps.LatLng(lat.value, lng.value);
+        var bounds = new google.maps.Circle({center: latlang, radius: 2000}).getBounds();
+        alert(bounds);
+        alert(lat.value);
+        alert(lng.value);
+        document.getElementById('modal-data').appendChild(lng);
+        forms.submit();
+    });
+</script>
+</body>
+</html>

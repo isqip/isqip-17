@@ -1,0 +1,75 @@
+#caption{
+	color: red;
+	font-family: monospace;
+	font-size: 60px;
+	font-weight: bold;
+	padding-top: 150px;
+	color: #e8e7e7;
+	padding-left: 400px;
+}
+#titleb{
+	width: 100%;
+	height: 768px;
+	background-image: url("../images/title.png");
+	 
+
+}
+#name{
+	height: 100px;
+	color: #cec3c3;
+	font-family: monospace;
+	font-size: 100px;
+	font-weight: bolder;
+	
+	padding-left: 500px;
+	
+
+}
+#stext{
+	padding-left: 10px;
+	padding-top: 120px;
+	font-size: 30px;
+}
+#fblock{
+	height: 100px;
+	text-align: center;
+	font-family: serif;
+	color: red;
+	background-color: cyan;
+	max-width: 50%;
+	outline-style: none;
+	text-decoration: none;
+
+
+}
+#sblock{
+	height: 400px;
+	text-align: center;
+	color: blue;
+	background-position: right top;
+	background-attachment: fixed;
+	border-style: none;
+	border-color: red;
+	border-width: 5px,10px,15px,20px;
+	max-width: 40%;
+	float:right;
+}
+#body{
+	background-color: #cec3c3;
+}
+#table{
+	font-size: 30px;
+	font-family: monospace;
+	font-weight: bolder;
+	border: 2px solid lightblue;
+	width: 100%;
+	text-align: center;
+	padding-top: 80px;
+}
+#one, #two, #thre{
+	padding-left: 80px;
+	padding-bottom: 5px;
+}
+#l2, #l1, #l3{
+	color: black;
+}

@@ -1,0 +1,11 @@
+<% include header %>
+<h3>Enter House Number to View Consumer Details: </h3>
+	<form action="/student/list" method="post" class="col-md-6 center">
+		<div class="form-group">
+			<label class="control-label">House Number</label>
+			<input class="form-control" type="text" name="rollNum" placeholder="Enter House Number" />
+		</div>
+		<a href="/" class="btn btn-danger">Cancel</a>
+		<button type="submit" class="btn btn-info pull-right">List</button>
+	</form>
+<% include footer %>

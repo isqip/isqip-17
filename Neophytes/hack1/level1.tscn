@@ -1,0 +1,2740 @@
+[gd_scene load_steps=17 format=1]
+
+[ext_resource path="res://level1.gd" type="Script" id=1]
+[ext_resource path="res://bg1.png" type="Texture" id=2]
+[ext_resource path="res://tiles.tres" type="TileSet" id=3]
+[ext_resource path="res://player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sound/Thugs.ogg" type="AudioStream" id=5]
+[ext_resource path="res://objects/Sign_1.png" type="Texture" id=6]
+[ext_resource path="res://fonts/zerovelocity.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://coin.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.1569, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 11.4849 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 727.038 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 11.6918, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 23.4349, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24.5417, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 4.12303 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 13.033 )
+
+[node name="Node2D" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="bg1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 494.87, 60.5463 )
+transform/scale = Vector2( 1.90182, 2.56075 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bg2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2802.11, 57.1509 )
+transform/scale = Vector2( 1.71923, 2.55014 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bg3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 5137.71, 57.1509 )
+transform/scale = Vector2( 1.94484, 2.55014 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bg4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 7577.32, 62.4437 )
+transform/scale = Vector2( 1.87562, 2.56668 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bg5" type="Sprite" parent="."]
+
+transform/pos = Vector2( 10044.8, 67.7365 )
+transform/scale = Vector2( 2.0758, 2.55014 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bg6" type="Sprite" parent="."]
+
+transform/pos = Vector2( 12698, 67.7365 )
+transform/scale = Vector2( 2.0758, 2.55014 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+
+transform/pos = Vector2( 11, 0 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell/size = Vector2( 128, 128 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -130985, 5, -130984, 7, 65571, 5, 65572, 7, 65578, 5, 65579, 7, 65585, 5, 65586, 7, 65593, 5, 65594, 6, 65595, 6, 65596, 7, 65618, 5, 65619, 6, 65620, 7, 131096, 5, 131097, 6, 131098, 7, 131103, 5, 131104, 6, 131105, 7, 196614, 0, 196615, 2, 196622, 5, 196623, 6, 196624, 7, 196627, 5, 196628, 6, 196629, 6, 196630, 6, 196631, 7, 196660, 5, 196661, 6, 196662, 7, 196669, 0, 196670, 2, 196671, 1, 196677, 5, 196678, 7, 196688, 5, 196689, 6, 196690, 6, 196691, 7, 262149, 0, 262150, 16, 262151, 16, 262152, 2, 262156, 5, 262157, 7, 262161, 5, 262162, 7, 262181, 5, 262182, 6, 262183, 6, 262184, 6, 262185, 6, 262186, 7, 262204, 0, 262205, 16, 262206, 16, 262207, 16, 262208, 1, 262221, 5, 262222, 7, 262234, 5, 262235, 7, 262241, 5, 262242, 7, 393210, 11, 393211, 11, 393212, 11, 393213, 0, 393214, 2, 393215, 2, 327680, 2, 327681, 2, 327682, 11, 327683, 11, 327684, 0, 327685, 16, 327686, 16, 327687, 16, 327688, 16, 327689, 2, 327690, 2, 327691, 2, 327692, 11, 327693, 11, 327694, 11, 327695, 11, 327696, 11, 327697, 11, 327698, 11, 327699, 11, 327700, 11, 327701, 11, 327702, 11, 327703, 11, 327704, 11, 327705, 11, 327706, 0, 327707, 2, 327708, 2, 327709, 2, 327710, 2, 327711, 3, 327712, 11, 327713, 11, 327714, 11, 327715, 11, 327716, 11, 327717, 11, 327718, 11, 327719, 11, 327720, 11, 327721, 11, 327722, 11, 327723, 11, 327724, 11, 327725, 11, 327726, 11, 327727, 11, 327728, 11, 327729, 11, 327730, 11, 327731, 11, 327732, 11, 327733, 11, 327734, 11, 327735, 11, 327736, 11, 327737, 0, 327738, 2, 327739, 2, 327740, 16, 327741, 16, 327742, 16, 327743, 16, 327744, 16, 327745, 2, 327746, 2, 327747, 2, 327748, 11, 327749, 11, 327750, 11, 327751, 11, 327752, 11, 327753, 2, 327754, 2, 327755, 11, 327756, 11, 327757, 11, 327758, 11, 327759, 11, 327760, 11, 327761, 11, 327762, 11, 327763, 11, 327764, 11, 327765, 11, 327766, 2, 327767, 2, 327768, 2, 327769, 11, 327770, 11, 327771, 11, 327772, 11, 327773, 11, 327774, 11, 327775, 11, 327776, 11, 327777, 11, 327778, 11, 327779, 11, 327780, 0, 327781, 2, 327782, 2, 327783, 2, 327784, 2, 327785, 2, 327786, 2, 327787, 2, 327788, 2, 327789, 2, 458746, 12, 458747, 12, 458748, 12, 458749, 13, 458750, 16, 458751, 16, 393216, 16, 393217, 14, 393218, 12, 393219, 12, 393220, 13, 393221, 16, 393222, 16, 393223, 16, 393224, 16, 393225, 16, 393226, 16, 393227, 14, 393228, 12, 393229, 12, 393230, 12, 393231, 12, 393232, 12, 393233, 12, 393234, 12, 393235, 12, 393236, 12, 393237, 12, 393238, 12, 393239, 12, 393240, 12, 393241, 12, 393242, 13, 393243, 16, 393244, 16, 393245, 16, 393246, 16, 393247, 14, 393248, 12, 393249, 12, 393250, 12, 393251, 12, 393252, 12, 393253, 12, 393254, 12, 393255, 12, 393256, 12, 393257, 12, 393258, 12, 393259, 12, 393260, 12, 393261, 12, 393262, 12, 393263, 12, 393264, 12, 393265, 12, 393266, 12, 393267, 12, 393268, 12, 393269, 12, 393270, 12, 393271, 12, 393272, 12, 393273, 13, 393274, 16, 393275, 16, 393276, 16, 393277, 16, 393278, 16, 393279, 16, 393280, 16, 393281, 16, 393282, 16, 393283, 14, 393284, 12, 393285, 12, 393286, 12, 393287, 12, 393288, 12, 393289, 12, 393290, 12, 393291, 12, 393292, 12, 393293, 12, 393294, 12, 393295, 12, 393296, 12, 393297, 12, 393298, 12, 393299, 12, 393300, 12, 393301, 12, 393302, 12, 393303, 12, 393304, 12, 393305, 12, 393306, 12, 393307, 12, 393308, 12, 393309, 12, 393310, 12, 393311, 12, 393312, 12, 393313, 12, 393314, 12, 393315, 12, 393316, 13, 393317, 16, 393318, 16, 393319, 16, 393320, 16, 393321, 16, 393322, 16, 393323, 16, 393324, 16, 393325, 16, 524282, 12, 524283, 12, 524284, 12, 524285, 13, 524286, 16, 524287, 16, 458752, 16, 458753, 14, 458754, 12, 458755, 12, 458756, 13, 458757, 16, 458758, 16, 458759, 16, 458760, 16, 458761, 16, 458762, 16, 458763, 14, 458764, 12, 458765, 12, 458766, 12, 458767, 12, 458768, 12, 458769, 12, 458770, 12, 458771, 12, 458772, 12, 458773, 12, 458774, 12, 458775, 12, 458776, 12, 458777, 12, 458778, 13, 458779, 16, 458780, 16, 458781, 16, 458782, 16, 458783, 14, 458784, 12, 458785, 12, 458786, 12, 458787, 12, 458788, 12, 458789, 12, 458790, 12, 458791, 12, 458792, 12, 458793, 12, 458794, 12, 458795, 12, 458796, 12, 458797, 12, 458798, 12, 458799, 12, 458800, 12, 458801, 12, 458802, 12, 458803, 12, 458804, 12, 458805, 12, 458806, 12, 458807, 12, 458808, 12, 458809, 13, 458810, 16, 458811, 16, 458812, 16, 458813, 16, 458814, 16, 458815, 16, 458816, 16, 458817, 16, 458818, 16, 458819, 14, 458820, 12, 458821, 12, 458822, 12, 458823, 12, 458824, 12, 458825, 12, 458826, 12, 458827, 12, 458828, 12, 458829, 12, 458830, 12, 458831, 12, 458832, 12, 458833, 12, 458834, 12, 458835, 12, 458836, 12, 458837, 12, 458838, 12, 458839, 12, 458840, 12, 458841, 12, 458842, 12, 458843, 12, 458844, 12, 458845, 12, 458846, 12, 458847, 12, 458848, 12, 458849, 12, 458850, 12, 458851, 12, 458852, 13, 458853, 16, 458854, 16, 458855, 16, 458856, 16, 458857, 16, 458858, 16, 458859, 16, 458860, 16, 458861, 16, 589818, 12, 589819, 12, 589820, 12, 589821, 13, 589822, 16, 589823, 16, 524288, 16, 524289, 14, 524290, 12, 524291, 12, 524292, 13, 524293, 16, 524294, 16, 524295, 16, 524296, 16, 524297, 16, 524298, 16, 524299, 14, 524300, 12, 524301, 12, 524302, 12, 524303, 12, 524304, 12, 524305, 12, 524306, 12, 524307, 12, 524308, 12, 524309, 12, 524310, 12, 524311, 12, 524312, 12, 524313, 12, 524314, 13, 524315, 16, 524316, 16, 524317, 16, 524318, 16, 524319, 14, 524320, 12, 524321, 12, 524322, 12, 524323, 12, 524324, 12, 524325, 12, 524326, 12, 524327, 12, 524328, 12, 524329, 12, 524330, 12, 524331, 12, 524332, 12, 524333, 12, 524334, 12, 524335, 12, 524336, 12, 524337, 12, 524338, 12, 524339, 12, 524340, 12, 524341, 12, 524342, 12, 524343, 12, 524344, 12, 524345, 13, 524346, 16, 524347, 16, 524348, 16, 524349, 16, 524350, 16, 524351, 16, 524352, 16, 524353, 16, 524354, 16, 524355, 14, 524356, 12, 524357, 12, 524358, 12, 524359, 12, 524360, 12, 524361, 12, 524362, 12, 524363, 12, 524364, 12, 524365, 12, 524366, 12, 524367, 12, 524368, 12, 524369, 12, 524370, 12, 524371, 12, 524372, 12, 524373, 12, 524374, 12, 524375, 12, 524376, 12, 524377, 12, 524378, 12, 524379, 12, 524380, 12, 524381, 12, 524382, 12, 524383, 12, 524384, 12, 524385, 12, 524386, 12, 524387, 12, 524388, 13, 524389, 16, 524390, 16, 524391, 16, 524392, 16, 524393, 16, 524394, 16, 524395, 16, 524396, 16, 524397, 16, 655354, 12, 655355, 12, 655356, 12, 655357, 9, 655358, 8, 655359, 8, 589824, 8, 589825, 10, 589826, 12, 589827, 12, 589828, 9, 589829, 8, 589830, 8, 589831, 8, 589832, 8, 589833, 8, 589834, 8, 589835, 10, 589836, 12, 589837, 12, 589838, 12, 589839, 12, 589840, 12, 589841, 12, 589842, 12, 589843, 12, 589844, 12, 589845, 12, 589846, 12, 589847, 12, 589848, 12, 589849, 12, 589850, 9, 589851, 8, 589852, 8, 589853, 8, 589854, 8, 589855, 10, 589856, 12, 589857, 12, 589858, 12, 589859, 12, 589860, 12, 589861, 12, 589862, 12, 589863, 12, 589864, 12, 589865, 12, 589866, 12, 589867, 12, 589868, 12, 589869, 12, 589870, 12, 589871, 12, 589872, 12, 589873, 12, 589874, 12, 589875, 12, 589876, 12, 589877, 12, 589878, 12, 589879, 12, 589880, 12, 589881, 13, 589882, 8, 589883, 8, 589884, 8, 589885, 8, 589886, 8, 589887, 8, 589888, 8, 589889, 8, 589890, 8, 589891, 14, 589892, 12, 589893, 12, 589894, 12, 589895, 12, 589896, 12, 589897, 12, 589898, 12, 589899, 12, 589900, 12, 589901, 12, 589902, 12, 589903, 12, 589904, 12, 589905, 12, 589906, 12, 589907, 12, 589908, 12, 589909, 12, 589910, 12, 589911, 12, 589912, 12, 589913, 12, 589914, 12, 589915, 12, 589916, 12, 589917, 12, 589918, 12, 589919, 12, 589920, 12, 589921, 12, 589922, 12, 589923, 12, 589924, 9, 589925, 8, 589926, 8, 589927, 8, 589928, 8, 589929, 8, 589930, 8, 589931, 8, 589932, 8, 589933, 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -154.758, 565.341 )
+
+[node name="Music" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 5 )
+stream/play = false
+stream/loop = true
+stream/volume_db = 0.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
+
+[node name="Sign_1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 13381.2, 466.968 )
+transform/scale = Vector2( 10.5321, 5.28001 )
+texture = ExtResource( 6 )
+
+[node name="Victory" type="Sprite" parent="."]
+
+transform/pos = Vector2( 13031.9, 303.727 )
+transform/scale = Vector2( 686.401, 320.321 )
+
+[node name="Label" type="Label" parent="Victory"]
+
+rect/scale = Vector2( 0.002, 0.005 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 762.0
+margin/bottom = 144.0
+custom_fonts/font = ExtResource( 7 )
+text = "WON"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="death" type="Area2D" parent="."]
+
+transform/pos = Vector2( 429.784, 968.741 )
+transform/scale = Vector2( 7.30482, 3.51134 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1.38049, 0, 0, 1, -4.54148, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death"]
+
+transform/pos = Vector2( -4.54148, 0 )
+transform/scale = Vector2( 1.38049, 1 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="left_wall" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( -379.225, 477.114 )
+transform/scale = Vector2( 1, 20.8671 )
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1.3677, 0, 4.78012 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall"]
+
+transform/pos = Vector2( 0, 4.78012 )
+transform/scale = Vector2( 1, 1.3677 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="right_wall" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 14001.6, 324.541 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
+
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin" type="Area2D" parent="."]
+
+transform/pos = Vector2( 42.492, 601.875 )
+transform/scale = Vector2( 0.418017, 0.386238 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, -10.1006, 6.55457 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin"]
+
+transform/pos = Vector2( -11.9026, 8.146 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin"]
+
+transform/pos = Vector2( -10.1006, 6.55457 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin1" type="Area2D" parent="."]
+
+transform/pos = Vector2( 48.8552, 600.025 )
+transform/scale = Vector2( 0.418017, 0.386238 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 67.6235, 4.21802 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin1"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin1"]
+
+transform/pos = Vector2( 67.6235, 4.21802 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin2" type="Area2D" parent="."]
+
+transform/pos = Vector2( 82.2476, 600.025 )
+transform/scale = Vector2( 0.418017, 0.386238 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 67.6235, 4.21802 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin2"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin2"]
+
+transform/pos = Vector2( 67.6235, 4.21802 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin3" type="Area2D" parent="."]
+
+transform/pos = Vector2( 125.982, 601.553 )
+transform/scale = Vector2( 0.357375, 0.386238 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 67.6235, 4.21802 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin3"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin3"]
+
+transform/pos = Vector2( 67.6235, 4.21802 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin4" type="Area2D" parent="."]
+
+transform/pos = Vector2( 150.838, 601.599 )
+transform/scale = Vector2( 0.418017, 0.386238 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 67.6235, 4.21802 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin4"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin4"]
+
+transform/pos = Vector2( 67.6235, 4.21802 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin5" type="Area2D" parent="."]
+
+transform/pos = Vector2( 570.241, 609.507 )
+transform/scale = Vector2( 0.424177, 0.470245 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin5"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin5"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin6" type="Area2D" parent="."]
+
+transform/pos = Vector2( 688.681, 483.665 )
+transform/scale = Vector2( 0.424177, 0.470245 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin6"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin6"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin7" type="Area2D" parent="."]
+
+transform/pos = Vector2( 833.029, 354.122 )
+transform/scale = Vector2( 0.424177, 0.470245 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin7"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin7"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin8" type="Area2D" parent="."]
+
+transform/pos = Vector2( 914.457, 354.122 )
+transform/scale = Vector2( 0.424177, 0.470245 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin8"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin8"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin9" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1081.01, 481.814 )
+transform/scale = Vector2( 0.424177, 0.470245 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin9"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin9"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin10" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1195.75, 596.553 )
+transform/scale = Vector2( 0.424177, 0.470245 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin10"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin10"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin11" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1250.55, 599.725 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin11"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin11"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin12" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1308.77, 599.725 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin12"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin12"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin13" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1366.99, 599.725 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin13"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin13"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin14" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1418.36, 603.15 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin14"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin14"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin15" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1647.82, 476.433 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin15"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin15"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin16" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1843.03, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin16"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin16"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin17" type="Area2D" parent="."]
+
+transform/pos = Vector2( 1938.93, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin17"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin17"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin18" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2021.12, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin18"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin18"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin19" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2099.89, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin19"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin19"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin20" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2295.11, 476.433 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin20"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin20"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin21" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2486.89, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin21"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin21"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin22" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2562.24, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin22"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin22"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin23" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2637.58, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin23"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin23"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin24" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2716.35, 353.141 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin24"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin24"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin25" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2805.4, 353.141 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin25"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin25"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin26" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2884.17, 353.141 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin26"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin26"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin27" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2966.36, 356.566 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin27"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin27"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin28" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3141.03, 219.574 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin28"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin28"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin29" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3212.95, 216.149 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin29"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin29"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin30" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3284.87, 216.149 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin30"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin30"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin31" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3356.79, 216.149 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin31"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin31"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin32" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3552, 291.495 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin32"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin32"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin33" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3613.65, 291.495 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin33"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin33"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin34" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3675.3, 291.495 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin34"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin34"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin35" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3736.94, 291.495 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin35"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin35"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin36" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3812.29, 291.495 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin36"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin36"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin37" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3562.28, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin37"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin37"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin38" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3617.07, 346.291 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin38"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin38"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin39" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3682.14, 342.866 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin39"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin39"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin40" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3743.79, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin40"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin40"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin41" type="Area2D" parent="."]
+
+transform/pos = Vector2( 3819.14, 346.291 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin41"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin41"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin42" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4034.9, 222.999 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin42"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin42"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin43" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4161.61, 219.574 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin43"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin43"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin44" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4278.06, 219.574 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin44"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin44"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin45" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4435.6, 219.574 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin45"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin45"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin46" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4589.71, 82.5827 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin46"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin46"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin47" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4805.47, 192.176 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin47"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin47"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin48" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4873.97, 199.025 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin48"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin48"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin49" type="Area2D" parent="."]
+
+transform/pos = Vector2( 4959.59, 199.025 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin49"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin49"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin50" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5048.63, 199.025 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin50"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin50"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin51" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5141.1, 195.601 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin51"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin51"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin52" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5233.57, 199.025 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin52"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin52"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin53" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5490.43, 89.4323 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin53"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin53"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin54" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5737.02, 202.45 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin54"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin54"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin55" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5925.38, 202.45 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin55"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin55"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin56" type="Area2D" parent="."]
+
+transform/pos = Vector2( 6127.44, 212.725 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin56"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin56"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin57" type="Area2D" parent="."]
+
+transform/pos = Vector2( 6384.3, 96.2819 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin57"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin57"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin58" type="Area2D" parent="."]
+
+transform/pos = Vector2( 6719.93, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin58"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin58"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin59" type="Area2D" parent="."]
+
+transform/pos = Vector2( 6788.43, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin59"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin59"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin60" type="Area2D" parent="."]
+
+transform/pos = Vector2( 6867.2, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin60"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin60"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin61" type="Area2D" parent="."]
+
+transform/pos = Vector2( 6952.82, 349.716 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin61"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin61"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin62" type="Area2D" parent="."]
+
+transform/pos = Vector2( 7411.74, 548.354 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin62"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin62"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin63" type="Area2D" parent="."]
+
+transform/pos = Vector2( 7528.18, 551.778 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin63"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin63"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin64" type="Area2D" parent="."]
+
+transform/pos = Vector2( 7733.67, 445.61 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin64"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin64"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin65" type="Area2D" parent="."]
+
+transform/pos = Vector2( 7891.21, 329.167 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin65"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin65"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin66" type="Area2D" parent="."]
+
+transform/pos = Vector2( 8072.72, 322.318 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin66"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin66"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin67" type="Area2D" parent="."]
+
+transform/pos = Vector2( 8257.66, 462.734 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin67"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin67"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin68" type="Area2D" parent="."]
+
+transform/pos = Vector2( 8380.95, 572.327 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin68"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin68"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin69" type="Area2D" parent="."]
+
+transform/pos = Vector2( 8545.34, 568.902 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin69"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin69"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin70" type="Area2D" parent="."]
+
+transform/pos = Vector2( 8946.04, 342.867 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin70"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin70"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin71" type="Area2D" parent="."]
+
+transform/pos = Vector2( 9459.76, 579.177 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin71"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin71"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin72" type="Area2D" parent="."]
+
+transform/pos = Vector2( 9980.33, 449.035 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin72"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin72"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin73" type="Area2D" parent="."]
+
+transform/pos = Vector2( 10343.4, 339.442 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin73"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin73"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin74" type="Area2D" parent="."]
+
+transform/pos = Vector2( 10487.2, 332.592 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin74"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin74"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin75" type="Area2D" parent="."]
+
+transform/pos = Vector2( 10668.7, 332.592 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin75"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin75"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin76" type="Area2D" parent="."]
+
+transform/pos = Vector2( 10548.8, 86.0075 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin76"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin76"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin77" type="Area2D" parent="."]
+
+transform/pos = Vector2( 11055.7, 579.177 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin77"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin77"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin78" type="Area2D" parent="."]
+
+transform/pos = Vector2( 11185.9, 579.177 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin78"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin78"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin79" type="Area2D" parent="."]
+
+transform/pos = Vector2( 11322.8, 575.752 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin79"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin79"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin80" type="Area2D" parent="."]
+
+transform/pos = Vector2( 11637.9, 452.46 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin80"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin80"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin81" type="Area2D" parent="."]
+
+transform/pos = Vector2( 12524.9, 445.61 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin81"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin81"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="coin82" type="Area2D" parent="."]
+
+transform/pos = Vector2( 12530.9, 445.61 )
+transform/scale = Vector2( 0.424177, 0.371108 )
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 2.90635, 0, 0, 2.96575, 71.8791, 6.50171 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="coin" type="Sprite" parent="coin82"]
+
+transform/pos = Vector2( 70.1395, 10.4827 )
+transform/scale = Vector2( 0.188112, 0.188272 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin82"]
+
+transform/pos = Vector2( 71.8791, 6.50171 )
+transform/scale = Vector2( 2.90635, 2.96575 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="death2" type="Area2D" parent="."]
+
+transform/pos = Vector2( 2432.65, 974.718 )
+transform/scale = Vector2( 28.2972, 1.58449 )
+input/pickable = true
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1.42612, 0, 0, 1.18077, 0.713889, -4.64997 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death2"]
+
+transform/pos = Vector2( 0.713889, -4.64997 )
+transform/scale = Vector2( 1.42612, 1.18077 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="death3" type="Area2D" parent="."]
+
+transform/pos = Vector2( 5698.98, 974.619 )
+transform/scale = Vector2( 51.1453, 1.54954 )
+input/pickable = true
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1.34119, 0, 0, 2.20272, 0.593925, 11.5452 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death3"]
+
+transform/pos = Vector2( 0.593925, 11.5452 )
+transform/scale = Vector2( 1.34119, 2.20272 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="death4" type="Area2D" parent="."]
+
+transform/pos = Vector2( 10757.1, 1038 )
+transform/scale = Vector2( 65.0229, 2.14372 )
+input/pickable = true
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 3.24104, 0, 0, 1.99833, -0.272945, -12.9783 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death4"]
+
+transform/pos = Vector2( -0.272945, -12.9783 )
+transform/scale = Vector2( 3.24104, 1.99833 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="win" type="Area2D" parent="."]
+
+transform/pos = Vector2( 13360.3, 428.435 )
+transform/scale = Vector2( 3.26802, 2.17868 )
+input/pickable = true
+shapes/0/shape = SubResource( 8 )
+shapes/0/transform = Matrix32( 2.90909, 0, 0, 2.57343, -6.06218, 1.45456 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="win"]
+
+transform/pos = Vector2( -6.06218, 1.45456 )
+transform/scale = Vector2( 2.90909, 2.57343 )
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="death" to="." method="_on_death_body_enter"]
+
+[connection signal="body_enter" from="coin" to="." method="_on_coin_body_enter"]
+
+[connection signal="body_enter" from="coin1" to="." method="_on_coin1_body_enter"]
+
+[connection signal="body_enter" from="coin2" to="." method="_on_coin2_body_enter"]
+
+[connection signal="body_enter" from="coin3" to="." method="_on_coin3_body_enter"]
+
+[connection signal="body_enter" from="coin4" to="." method="_on_coin4_body_enter"]
+
+[connection signal="body_enter" from="coin5" to="." method="_on_coin5_body_enter"]
+
+[connection signal="body_enter" from="coin6" to="." method="_on_coin6_body_enter"]
+
+[connection signal="body_enter" from="coin7" to="." method="_on_coin7_body_enter"]
+
+[connection signal="body_enter" from="coin8" to="." method="_on_coin8_body_enter"]
+
+[connection signal="body_enter" from="coin9" to="." method="_on_coin9_body_enter"]
+
+[connection signal="body_enter" from="coin10" to="." method="_on_coin10_body_enter"]
+
+[connection signal="body_enter" from="coin11" to="." method="_on_coin11_body_enter"]
+
+[connection signal="body_enter" from="coin12" to="." method="_on_coin12_body_enter"]
+
+[connection signal="body_enter" from="coin13" to="." method="_on_coin13_body_enter"]
+
+[connection signal="body_enter" from="coin14" to="." method="_on_coin14_body_enter"]
+
+[connection signal="body_enter" from="coin15" to="." method="_on_coin15_body_enter"]
+
+[connection signal="body_enter" from="coin16" to="." method="_on_coin16_body_enter"]
+
+[connection signal="body_enter" from="coin17" to="." method="_on_coin17_body_enter"]
+
+[connection signal="body_enter" from="coin18" to="." method="_on_coin18_body_enter"]
+
+[connection signal="body_enter" from="coin19" to="." method="_on_coin19_body_enter"]
+
+[connection signal="body_enter" from="coin20" to="." method="_on_coin20_body_enter"]
+
+[connection signal="body_enter" from="coin21" to="." method="_on_coin21_body_enter"]
+
+[connection signal="body_enter" from="coin22" to="." method="_on_coin22_body_enter"]
+
+[connection signal="body_enter" from="coin23" to="." method="_on_coin23_body_enter"]
+
+[connection signal="body_enter" from="coin24" to="." method="_on_coin24_body_enter"]
+
+[connection signal="body_enter" from="coin25" to="." method="_on_coin25_body_enter"]
+
+[connection signal="body_enter" from="coin26" to="." method="_on_coin26_body_enter"]
+
+[connection signal="body_enter" from="coin27" to="." method="_on_coin27_body_enter"]
+
+[connection signal="body_enter" from="coin28" to="." method="_on_coin28_body_enter"]
+
+[connection signal="body_enter" from="coin29" to="." method="_on_coin29_body_enter"]
+
+[connection signal="body_enter" from="coin30" to="." method="_on_coin30_body_enter"]
+
+[connection signal="body_enter" from="coin31" to="." method="_on_coin31_body_enter"]
+
+[connection signal="body_enter" from="coin32" to="." method="_on_coin32_body_enter"]
+
+[connection signal="body_enter" from="coin33" to="." method="_on_coin33_body_enter"]
+
+[connection signal="body_enter" from="coin34" to="." method="_on_coin34_body_enter"]
+
+[connection signal="body_enter" from="coin35" to="." method="_on_coin35_body_enter"]
+
+[connection signal="body_enter" from="coin36" to="." method="_on_coin36_body_enter"]
+
+[connection signal="body_enter" from="coin37" to="." method="_on_coin37_body_enter"]
+
+[connection signal="body_enter" from="coin38" to="." method="_on_coin38_body_enter"]
+
+[connection signal="body_enter" from="coin39" to="." method="_on_coin39_body_enter"]
+
+[connection signal="body_enter" from="coin40" to="." method="_on_coin40_body_enter"]
+
+[connection signal="body_enter" from="coin41" to="." method="_on_coin41_body_enter"]
+
+[connection signal="body_enter" from="coin42" to="." method="_on_coin42_body_enter"]
+
+[connection signal="body_enter" from="coin43" to="." method="_on_coin43_body_enter"]
+
+[connection signal="body_enter" from="coin44" to="." method="_on_coin44_body_enter"]
+
+[connection signal="body_enter" from="coin45" to="." method="_on_coin45_body_enter"]
+
+[connection signal="body_enter" from="coin46" to="." method="_on_coin46_body_enter"]
+
+[connection signal="body_enter" from="coin47" to="." method="_on_coin47_body_enter"]
+
+[connection signal="body_enter" from="coin48" to="." method="_on_coin48_body_enter"]
+
+[connection signal="body_enter" from="coin49" to="." method="_on_coin49_body_enter"]
+
+[connection signal="body_enter" from="coin50" to="." method="_on_coin50_body_enter"]
+
+[connection signal="body_enter" from="coin51" to="." method="_on_coin51_body_enter"]
+
+[connection signal="body_enter" from="coin52" to="." method="_on_coin52_body_enter"]
+
+[connection signal="body_enter" from="coin53" to="." method="_on_coin53_body_enter"]
+
+[connection signal="body_enter" from="coin54" to="." method="_on_coin54_body_enter"]
+
+[connection signal="body_enter" from="coin55" to="." method="_on_coin55_body_enter"]
+
+[connection signal="body_enter" from="coin56" to="." method="_on_coin56_body_enter"]
+
+[connection signal="body_enter" from="coin57" to="." method="_on_coin57_body_enter"]
+
+[connection signal="body_enter" from="coin58" to="." method="_on_coin58_body_enter"]
+
+[connection signal="body_enter" from="coin59" to="." method="_on_coin59_body_enter"]
+
+[connection signal="body_enter" from="coin60" to="." method="_on_coin60_body_enter"]
+
+[connection signal="body_enter" from="coin61" to="." method="_on_coin61_body_enter"]
+
+[connection signal="body_enter" from="coin62" to="." method="_on_coin62_body_enter"]
+
+[connection signal="body_enter" from="coin63" to="." method="_on_coin63_body_enter"]
+
+[connection signal="body_enter" from="coin64" to="." method="_on_coin64_body_enter"]
+
+[connection signal="body_enter" from="coin65" to="." method="_on_coin65_body_enter"]
+
+[connection signal="body_enter" from="coin66" to="." method="_on_coin66_body_enter"]
+
+[connection signal="body_enter" from="coin67" to="." method="_on_coin67_body_enter"]
+
+[connection signal="body_enter" from="coin68" to="." method="_on_coin68_body_enter"]
+
+[connection signal="body_enter" from="coin69" to="." method="_on_coin69_body_enter"]
+
+[connection signal="body_enter" from="coin70" to="." method="_on_coin70_body_enter"]
+
+[connection signal="body_enter" from="coin71" to="." method="_on_coin71_body_enter"]
+
+[connection signal="body_enter" from="coin72" to="." method="_on_coin72_body_enter"]
+
+[connection signal="body_enter" from="coin73" to="." method="_on_coin73_body_enter"]
+
+[connection signal="body_enter" from="coin74" to="." method="_on_coin74_body_enter"]
+
+[connection signal="body_enter" from="coin75" to="." method="_on_coin75_body_enter"]
+
+[connection signal="body_enter" from="coin76" to="." method="_on_coin76_body_enter"]
+
+[connection signal="body_enter" from="coin77" to="." method="_on_coin77_body_enter"]
+
+[connection signal="body_enter" from="coin78" to="." method="_on_coin78_body_enter"]
+
+[connection signal="body_enter" from="coin79" to="." method="_on_coin79_body_enter"]
+
+[connection signal="body_enter" from="coin80" to="." method="_on_coin80_body_enter"]
+
+[connection signal="body_enter" from="coin81" to="." method="_on_coin81_body_enter"]
+
+[connection signal="body_enter" from="coin82" to="." method="_on_coin82_body_enter"]
+
+[connection signal="body_enter" from="death2" to="." method="_on_death_body_enter"]
+
+[connection signal="body_enter" from="death3" to="." method="_on_death_body_enter"]
+
+[connection signal="body_enter" from="death4" to="." method="_on_death_body_enter"]
+
+[connection signal="body_enter" from="win" to="." method="_on_win_body_enter"]
+
+

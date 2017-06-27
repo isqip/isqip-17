@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@ your service- LogIn</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style/upstyle.css' %}">
+</head>
+<body id="body">
+<div >
+<div id="titleb">
+	<h1 id="name" >at your service</h1>
+	<h3 id="caption"> LOG IN</h3>
+<table id="table">
+  	<tr >
+    	<td id="one"><a id="l1" href="">about</a></th>
+    	<td id="two"><a id="l2" href="">explore</a> </th> 
+    	<td id="thre"><a id="l3" href="">contact</th>
+  	</tr>
+ </table>
+	</div>
+
+	<div id="fblock">
+		<p>You have been successfully logged out.</p>
+    	<p><a href="{% url 'login' %}">Log In</a> again.</p>
+  </form>
+	</div>
+
+
+	
+	<div id="sblock">
+		<p id="stext">Text2</p>
+	</div>
+	</div>
+
+</body>
+</html>

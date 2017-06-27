@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter"  ><!-- control goes to angular-->
+  <div ng-controller="MainController">
+    <ion-pane  >
+    <ion-header-bar class=" bar-stable">
+        <h1 class="title">My ionic app</h1>
+        <div class="bar bar-header bar-calm">
+          <h1 class="title">Sequerly</h1>
+        </div>
+    </ion-header-bar>
+    <div class="tabs" >
+      <a  ng-click="openModal()" class="tab-item">
+        Essentials
+      </a>
+      <a ng-click="openModal2()" class="tab-item">
+        Forums
+      </a>
+      <a ng-click="openModal3()" class="tab-item">
+        advanced
+      </a>
+      <a  ng-click="openModal4()" class="tab-item">
+      Hot
+  </a>
+</div>
+
+    
+      <ion-content>
+      <h2 style="text-align:center;">A guide for cyber security</h2>
+      <img style="margin-left:50px"   src="img/123.png"></img>
+      <!--login-->
+      <script id="my-modal5.html" type="text/ng-template">
+        <ion-modal-view>
+          <ion-header-bar>
+           <h1 class="title">Login</h1>
+          </ion-header-bar>
+          <ion-content >
+             <div class="list">
+                <label class="item item-input">
+                  <span class="input-label">Username</span>
+                  <input type="text" ng-model="task.user" />
+                </label>
+                <label class="item item-input">
+                  <span class="input-label">Password</span>
+                  <input type="password"/>
+                </label>
+              </div>
+           <button style="margin-left:150px" class="button button-positive" ng-click="closeModal5()">Enter</button>
+            
+
+          </ion-content>
+          </ion-modal-view>
+      </script>
+       <!--login close-->
+       <!--sign up-->
+       <script id="my-modal6.html" type="text/ng-template">
+        <ion-modal-view>
+          <ion-header-bar>
+           <h1 class="title">Sign up</h1>
+          </ion-header-bar>
+          <ion-content >
+           <div class="list">
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">Name</span>
+                <input type="text" ng-model="task.user" placeholder="John khonayi">
+              </label>
+              
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">Email</span>
+                <input type="text" placeholder="john@suhr.com">
+              </label>
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">Password</span>
+                <input type="password" >
+              </label>
+            </div>
+           <button style="margin-left:120px" class="button button-positive" ng-click="closeModal6()">Create Account</button>
+            
+
+          </ion-content>
+          </ion-modal-view>
+      </script>
+       <!--sign up close-->
+        <!--buttons-->
+       <button class="button button-positive " style="margin-left:75px; margin-top:40px;" ng-click="openModal5()">login</button>
+       <button class="button button-positive" style="margin-left:50px;margin-top:40px;" ng-click="openModal6()">sign-up</button>
+        <!--button close-->
+      <!--popup-->
+      <script id="my-modal.html" type="text/ng-template">
+          <ion-modal-view>
+          <ion-header-bar>
+           <h1 class="title">Essentials</h1>
+           <button style="margin-top:8px"  ng-click="closeModal()" class="button button-positive icon-left ion-home"> </button>
+          </ion-header-bar>
+          <ion-content >
+           <!--essentials-->
+                     
+             <div class="card">
+        <div class="item item-divider" style="background-color: orange">
+          ANTIVIRUSES
+        </div>
+        <div class="item item-text-wrap">
+VIRUS VIRUS VIRUS!!! such a pain in the head. Did you know you can actually get professional solutions that too for free? 
+ <a href=" http://lifehacker.com/why-you-should-use-antivirus-even-if-you-browse-carefu-476330249" ><br> read more</a>
+        </div>
+        </div>
+        <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: orange">
+          ANTI-MALWARE <br> (when you get yourself in a predicament)
+        </div>
+        <div class="item item-text-wrap">
+Think you're safe if you have an antivirus installed?? lol... guess again :P......These softwares help you get out of those extra sticky situations...wanna know more?
+ <a href=" http://lifehacker.com/the-difference-between-antivirus-and-anti-malware-and-1176942277"> <br> click here </a>
+        </div>
+        </div>
+        <br>
+
+        <div class="card">
+        <div class="item item-divider" style="background-color: orange">
+          AD-BLOCK
+        </div>
+        <div class="item item-text-wrap">
+Since Ads are almost universally hated......won't we be doing a civic good thing by eliminating them? :D  lol no!!  NO!! Ads are pretty much the only reason we have so much free content on the web today...But still......an adblocker can be useful to get rid of those pesky Ads ....but be sure to turn it off occassionally to support the freeware revolution ;)
+ <a href=" https://getadblock.com/ "><br> click me </a></div>
+        </div>
+        <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: orange">
+          TRACKING PROTECTION
+        </div>
+        <div class="item item-text-wrap">
+  How would you feel if a stalker followed you everywhere you go and recorded all the stuff you do??Sounds Super creepy right?? D:   Well that's exactly what happens when you surf the web without a tracking protection plug-in.
+  <br>To get rid of all those annoying trackers who you didn't know were following you O_O
+  <a href = "http://www.komando.com/tips/12053/protect-your-privacy-against-online-advertisers/all"> <br>  click here  </a> </div>
+        </div>
+
+
+           <!--essentials close-->
+
+
+           
+            
+
+          </ion-content>
+          </ion-modal-view>
+          </script>
+
+          <script id="my-modal2.html" type="text/ng-template">
+          <ion-modal-view>
+          <ion-header-bar>
+           <h1 class="title">Forums</h1>
+           <button style="margin-left:270px;margin-top:8px"  ng-click="closeModal2()" class="button button-positive icon-left ion-home" style="margin-top"></button>
+          </ion-header-bar>
+          <ion-content >
+            <div class="card" style="margin-top:30px"  >
+            <div class="item item-divider">
+            <h3 style="background-color:yellow;">Ramcharan</h3>
+              how to block ads?
+            </div>
+            </div>
+            <div class="card" style="margin-top:30px"  >
+            <div class="item item-divider">
+            <h3 style="background-color:yellow;">vijay</h3>
+              use an ad-blocker. 
+            </div>
+            </div>
+            <!--array-->
+            <div class="card" style="margin-top:30px" ng-repeat="temp in ntask" >
+            <div class="item item-divider">
+              
+             <u style="background-color:yellow;"> {{temp.user}} </u>
+              <br>
+              {{temp.title}}
+            </div>
+            
+            </div>
+             <form>
+              
+              <input type="text"  name="a" style="background-color:#dccccc;" ng-model="task.title" />
+
+            </form>
+            <button class="button button-positive " ng-click="createTask(task)" >sent</button>
+
+            
+            <!--array close-->
+
+          </ion-content>
+          </ion-modal-view>
+          </script>
+          <!--forum-->
+          <script id="my-modal3.html" type="text/ng-template">
+          <ion-modal-view>
+          <ion-header-bar>
+           <h1 class="title">Advanced</h1>
+           <button style="margin-left:270px;margin-top:8px"  ng-click="closeModal3()" class="button button-positive icon-left ion-home"  tyle="margin-top"></button>
+          </ion-header-bar>
+          <ion-content >
+           <!--copied-->
+           <div class="card" >
+        <div class="item item-divider " style="background-color: lightgreen">
+          Ever hear about "Deep web"???
+        </div>
+        <div class="item item-text-wrap">
+The latest analysis reveals that the surface web (The part of web you surf using google or any other standard search engines) Has about 167 terabytes of data(whoa!) and check this..............the deep web has 91,000 terabytes of data *mind blown* O_O
+<br> To know what lies there and why probably wouldn't want to go there...:P
+ <a href=" http://www.makeuseof.com/tag/deep-web-important-think/"> click here </a>
+        </div>
+        </div>
+        <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Discounts!! Yay!!!
+        </div>
+        <div class="item item-text-wrap">
+Everyone loves discounts......did you know there's a browser extension that finds out discount codes with which you can get discounts on your online purchases. Yay!!
+ <a href=" https://www.joinhoney.com/"> read more  </a>      </div>
+        </div>
+        <br>
+
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Got a New PC??
+        </div>
+        <div class="item item-text-wrap">
+We all know how much of a hassle it is setting up your new PC with all the essential software you're gonna need............ever try "ninite"??...Then you should right now!!
+<a href=" https://ninite.com/"> <br>click here </a>
+        </div>
+        </div>
+        <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Guest mode
+        </div>
+        <div class="item item-text-wrap">
+We all hate logging into our google or facbook acoounts from someone else's computer........well......with chrome's guest mode you can actually log in to your account without saving any cookies on that PC.....wanna know how??
+ <a href = " http://www.pcworld.com/article/2101286/how-to-use-google-chromes-secret-guest-profile-feature.html"> click </a> </div>
+        </div>
+
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+AAArgh!!! My PC looks so generic ........D:
+        </div>
+        <div class="item item-text-wrap">
+Wanna make your computer stand out??Ever hear about devianart?? explore themeing like you've never imagined before,..try out some radical rainmeter skins while you're at it  Go crazy ;)
+ <a href = "http://www.deviantart.com/"> <br> read more  </a>
+        </div>
+        </div>
+        <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Error 403 forbidden!!!
+        </div>
+        <div class="item item-text-wrap">
+Yup....it's really annoying when the goevrnment or your ISP won't let you browse the web freely.........wanna know how to get around it?Ever hear about proxies or VPNs??well...check'em out right now!!(do be careful.....those websites are blocked for a reason)
+  <a href = "https://www.lifewire.com/403-forbidden-error-explained-2617989"> <br> click </a>
+        </div>
+        </div>
+        <br>
+
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Ugh!! My Android's battery won't last even half a day D:        
+        </div>
+        <div class="item item-text-wrap">
+Well........we all know howmany battery "saving" apps are out there.......but the actually ....all they do is drain your battery....;-;........It's time you try out GREENIFY.......and restrict those pesky apps from constantly sapping your juice.
+ "<a href = "https://www.howtogeek.com/198135/how-to-optimize-your-android-phones-battery-life-using-greenify/"><br> read more </a> </div>
+        </div>
+        <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Always have a backup
+        </div>
+        <div class="item item-text-wrap">
+Don't you just hate it when your phone suddenly crashes......and you lose all your data?? :(  Well ....what if i told you that you can actually take a backup of your phone and make it look and function exactly the same way that phone was when made that backup??sounds like a life saver eey??well....you can do exactly that if your phone is rooted.........(be warned:the method to rooting your phone involves methods that are too geeky for some users ..^_^; )
+ <a hrf = " http://trendblog.net/android-guide-make-nandroid-backup-android-phone/"> <br> click here </a>
+        </div>
+        </div>
+        
+  <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Man!! My phone doesn't sound good at all :(
+        </div>
+        <div class="item item-text-wrap">
+Ever hear about viper or dolby?? Did you know you can actually install these sound modules on your phone??#Arise_overkill
+ <a href = " https://forum.xda-developers.com/android/software/r-s-e-sound-systems-auditory-research-t3379709"> <br> click here </a>
+        </div>
+        </div>
+        <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Did you know you can get paid apps..... for free??!!;)
+        </div>
+        <div class="item item-text-wrap">
+Yup,....you heard me......you can actually get paid aps from the play store for free.......HOORAAH!!! AND IT'S LEGAL!!!!!(whoa! :O).......say hello to google opinion rewards.:D
+  <a href = "http://gadgets.ndtv.com/apps/features/google-free-rewards-india-android-opinion-local-guides-media-panel-1705077 "> <br> read more </a>  </div>
+        </div>
+        <br>
+
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Photoshop for free
+        </div>
+        <div class="item item-text-wrap">
+lol! just kidding....you're gonna have to pay for photoshop.........although......you can get the next best thing......for free!!...yup....say hello to gimp and paint.NET
+<a href="https://www.gimp.org/"> <br> click here </a>
+        </div>
+        </div>
+        <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Wanna try out linux?   INSIDE WINDOWS?????
+        </div>
+        <div class="item item-text-wrap">
+Yup......you heard me.....you can run linux operating systems INSIDE your windows machine....and vice versa....Meet Oracle's prodigy son.......VirtualBox.
+ <a href = "https://www.virtualbox.org/ "> <br>  click here </a>       </div>
+        </div>
+           <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Wanna try out linux?   INSIDE ANDROID ?????
+        </div>
+        <div class="item item-text-wrap">
+ditto.......ditto.........yaadi yaadi yaada...(all the stuf from the above) BUT ON ANDROID!!!! try out linux deploy. *wink*
+  <a href = "http://www.androidauthority.com/install-ubuntu-on-your-android-smartphone-765408/"> <br> click here </a>        </div>
+        </div>
+
+   <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Automate your Phone        </div>
+        <div class="item item-text-wrap">
+Everyone loves automatic stuff.......did you know you can automate your phone to do stuff you want to do........install tasker and teach your phone to do stuff on its own.
+  <a href = "http://tasker.dinglisch.net/"> <br> click here </a>
+        </div>
+        </div>
+
+           <br>
+        
+
+           <!--copied-->
+            
+
+          </ion-content>
+          </ion-modal-view>
+          </script>
+          <!--popup3 close-->
+          <!--popup4-->
+          <script id="my-modal4.html" type="text/ng-template">
+          <ion-modal-view>
+          <ion-header-bar>
+           <h1 class="title">Hot</h1>
+           <button style="margin-left:270px;margin-top:8px"  ng-click="closeModal4()" class="button button-positive icon-left ion-home " style="margin-top"></button>
+          </ion-header-bar>
+          <ion-content >
+           
+            <!--copied-->
+            <br>
+           <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+        Major Security flow discovered in Android 
+        </div>
+        <div class="item item-text-wrap">
+Yup......you heard me.....you can run linux operating systems INSIDE your windows machine....and vice versa....Meet Oracle's prodigy son.......VirtualBox.
+ <a href = "https://www.virtualbox.org/ "> <br>  click here </a>       </div>
+        </div>
+           <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Wanna try out linux?   INSIDE ANDROID ?????
+        </div>
+        <div class="item item-text-wrap">
+ditto.......ditto.........yaadi yaadi yaada...(all the stuf from the above) BUT ON ANDROID!!!! try out linux deploy. *wink*
+  <a href = "http://www.androidauthority.com/install-ubuntu-on-your-android-smartphone-765408/"> <br> click here </a>        </div>
+        </div>
+
+   <br>
+        <div class="card">
+        <div class="item item-divider" style="background-color: lightgreen">
+Automate your Phone        </div>
+        <div class="item item-text-wrap">
+Everyone loves automatic stuff.......did you know you can automate your phone to do stuff you want to do........install tasker and teach your phone to do stuff on its own.
+  <a href = "http://tasker.dinglisch.net/"> <br> click here </a>
+        </div>
+        </div>
+
+           <br>
+            
+            <!--copied-->
+
+          </ion-content>
+          </ion-modal-view>
+          </script>
+          <!--popup4 close-->
+          
+      </ion-content>
+</div>
+    </ion-pane>
+    
+  </body>
+</html>

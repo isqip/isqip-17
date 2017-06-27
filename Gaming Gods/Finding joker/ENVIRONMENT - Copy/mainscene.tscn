@@ -1,0 +1,119 @@
+[gd_scene load_steps=16 format=1]
+
+[ext_resource path="res://old/main.gd" type="Script" id=1]
+[ext_resource path="res://JnRLayer01.png" type="Texture" id=2]
+[ext_resource path="res://ENVIRONMENT/1.png" type="Texture" id=3]
+[ext_resource path="res://ENVIRONMENT/2.png" type="Texture" id=4]
+[ext_resource path="res://ENVIRONMENT/3.png" type="Texture" id=5]
+[ext_resource path="res://ENVIRONMENT/4.png" type="Texture" id=6]
+[ext_resource path="res://ENVIRONMENT/5.png" type="Texture" id=7]
+[ext_resource path="res://ENVIRONMENT/6.png" type="Texture" id=8]
+[ext_resource path="res://ENVIRONMENT/7.png" type="Texture" id=9]
+[ext_resource path="res://ENVIRONMENT/8.png" type="Texture" id=10]
+[ext_resource path="res://LOSE___.fnt" type="BitmapFont" id=11]
+[ext_resource path="res://CRAZK1___.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://CONTINUE___.fnt" type="BitmapFont" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=2]
+
+region = Rect2( 0, 0, 0, 0 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[node name="Node2D" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="BG" type="Sprite" parent="."]
+
+transform/pos = Vector2( 513.902, 297.534 )
+transform/scale = Vector2( 2.549, 2.44059 )
+texture = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+
+transform/pos = Vector2( 185.333, 412.212 )
+transform/scale = Vector2( 0.847073, 0.749397 )
+frames = SubResource( 1 )
+animation = "default"
+frame = 7
+playing = true
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 330.0
+margin/top = 282.0
+margin/right = 709.0
+margin/bottom = 371.0
+custom_fonts/font = ExtResource( 11 )
+text = "SUPER BALL
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label 2" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 363.0
+margin/top = 377.0
+margin/right = 924.0
+margin/bottom = 425.0
+custom_fonts/font = ExtResource( 12 )
+text = "A GAMING GODS  CREATION"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 526.0
+margin/top = 454.0
+margin/right = 742.0
+margin/bottom = 524.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+icon = SubResource( 2 )
+flat = false
+
+[node name="Label" type="Label" parent="Button"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 6.0
+margin/top = 18.0
+margin/right = 214.0
+margin/bottom = 44.0
+custom_fonts/font = ExtResource( 13 )
+text = "LET'S ROLL"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+
